@@ -59,42 +59,22 @@ with st.container():
         ##can add an image here
         ##st_lottie(lottie_coding, height=300, key="coding"
 
-
 # ---- SIZING PREFERENCE ----
 with st.container():
     st.write("---")
     ##create 2 columns
     left_column, right_column = st.columns(2)
     with left_column:
-        ##Print size questions
+        ##Print size questions 
         st.header("Sizing Preference")
         st.write("##")
-        st.write("Do you want to purchase a space suit with custom measurements or with standard sizing?")
-        st.write("What is your preferred unit of measurement?")
-        st.write("Enter height")
-        st.write("Enter chest")
-        st.write("Enter waist")
-        st.write("Enter hips/seat")
-        st.write("Enter total arm length")
-        st.write("Enter inseam")
-        st.write("Enter body length")
-        st.write("Which size suit do you want to purchase?")
-    with right_column:
 
-
-# ---- SUIT COLOR ----
-with st.container():
-    st.write("---")
-    ##create 2 columns
-    left_column, right_column = st.columns(2)
-    with left_column:
-        ##Print size questions
-        st.header("Sizing Preference")
-        st.write("##")
         st.write("Do you want to purchase a space suit with custom measurements or with standard sizing?")
+        st.write("Custom     Standard")
         
         ##If user chooses custom measurements
         st.write("What is your preferred unit of measurement?")
+        st.write("cm     in")
 
         ##If user chooses cm then convert the answers to inches
 
@@ -108,6 +88,7 @@ with st.container():
 
         ##If user chooses standard sizing
         st.write("Which size suit do you want to purchase?")
+        st.write("XXS  XS  S  M  L  XL")
 
     with right_column:
         ##can add an image here
@@ -116,7 +97,17 @@ with st.container():
         ##st_lottie(lottie_coding, height=300, key="coding")
 
 
-
+# ---- SUIT COLOR ----
+with st.container():
+    st.write("---")
+    ##create 2 columns
+    left_column, right_column = st.columns(2)
+    with left_column:
+        ##Print color questions
+        st.header("Suit Color")
+        st.write("##")
+        st.write("What color do you want your suit to be?")
+    with right_column:
 
 
 # ---- PROJECTS ----
