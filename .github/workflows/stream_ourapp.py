@@ -5,7 +5,7 @@ from PIL import Image
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide")
 
 
 def load_lottieurl(url):
@@ -32,7 +32,7 @@ img_lottie_animation = Image.open("images/yt_lottie_animation.png")
 from PIL import Image
   
 # open method used to open different extension image file
-sizechart = Image.open(r"C:\Users\System-Pc\Desktop\Website-size-chart.png") 
+sizechart = Image.open("C:\Users\System-Pc\Desktop\Website-size-chart.png") 
   
 # This method will show sizechart in any image viewer 
 sizechart.show()
@@ -57,7 +57,8 @@ with st.container():
         st.write("For what purpose are you purchasing this suit?")
     with right_column:
         ##can add an image here
-        ##st_lottie(lottie_coding, height=300, key="coding")
+        ##st_lottie(lottie_coding, height=300, key="coding"
+
 
 # ---- SIZING PREFERENCE ----
 with st.container():
@@ -69,12 +70,7 @@ with st.container():
         st.header("Sizing Preference")
         st.write("##")
         st.write("Do you want to purchase a space suit with custom measurements or with standard sizing?")
-        
-        ##If user chooses custom measurements
         st.write("What is your preferred unit of measurement?")
-
-        ##If user chooses cm then convert the answers to inches
-
         st.write("Enter height")
         st.write("Enter chest")
         st.write("Enter waist")
@@ -82,15 +78,8 @@ with st.container():
         st.write("Enter total arm length")
         st.write("Enter inseam")
         st.write("Enter body length")
-
-        ##If user chooses standard sizing
         st.write("Which size suit do you want to purchase?")
-
     with right_column:
-        ##can add an image here
-        ##add size chart
-        ##add measurement images
-        ##st_lottie(lottie_coding, height=300, key="coding")
 
 
 # ---- SUIT COLOR ----
