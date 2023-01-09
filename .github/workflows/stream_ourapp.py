@@ -57,9 +57,7 @@ with st.container():
         st.text_input()
         st.write("For what purpose are you purchasing this suit?")
         st.text_input()
-    with right_column:
-        ##can add an image here
-        ##st_lottie(lottie_coding, height=300, key="coding"
+    
 
 # ---- SIZING PREFERENCE ----
 with st.container():
@@ -99,11 +97,6 @@ with st.container():
         st.write("Which size suit do you want to purchase?")
         st.write("XXS  XS  S  M  L  XL")
 
-    with right_column:
-        ##can add an image here
-        ##add size chart
-        ##add measurement images
-        ##st_lottie(lottie_coding, height=300, key="coding")
 
 
 # ---- SUIT COLOR ----
@@ -116,7 +109,6 @@ with st.container():
         st.header("Suit Color")
         st.write("##")
         st.selectbox("What color do you want your suit to be?", (Red, Yellow, Blue))
-    with right_column:
 
 # ---- PATCHES ----
 with st.container():
@@ -133,7 +125,7 @@ with st.container():
         st.write("We are currently unable to provide custom patches. However, if you would like to get your own, you have the option of including three blank patch spaces for the following dimensions:")
         st.write("2 circular patches (diameter 3.75': right chest, left arm")
         st.write("1 rectangular patch (2 x 4): left chest")
-    with right_column:
+
 
 # ---- FINISH ORDERING ----
 with st.container():
@@ -142,6 +134,5 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         ##Show finish ordering button
-        if st.button("Finish Ordering Suit")
-            st.write("Thank you for designing a Girl in Space Club flight suit!")
-    with right_column:
+        st.button("Finish Ordering Suit")
+        st.write("Thank you for designing a Girl in Space Club flight suit!")
