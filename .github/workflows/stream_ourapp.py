@@ -37,6 +37,7 @@ with st.container():
 
         ##If user chooses standard sizing
         st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
+        st.form_submit_button()
 
 
 
@@ -48,6 +49,7 @@ with st.container():
         st.header("Suit Color")
         st.write("##")
         st.selectbox("What color do you want your suit to be?", (Red, Yellow, Blue))
+        st.form_submit_button()
 
 # ---- PATCHES ----
 with st.container():
@@ -62,6 +64,7 @@ with st.container():
         st.write("We are currently unable to provide custom patches. However, if you would like to get your own, you have the option of including three blank patch spaces for the following dimensions:")
         st.checkbox("2 circular patches (diameter 3.75': right chest, left arm")
         st.checkbox("1 rectangular patch (2 x 4): left chest")
+        st.form_submit_button()
 
 
 # ---- FINISH ORDERING ----
