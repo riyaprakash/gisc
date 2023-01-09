@@ -28,6 +28,16 @@ lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fc
 img_contact_form = Image.open("images/yt_contact_form.png")
 img_lottie_animation = Image.open("images/yt_lottie_animation.png")
 
+# Imports PIL module 
+from PIL import Image
+  
+# open method used to open different extension image file
+sizechart = Image.open(r"C:\Users\System-Pc\Desktop\Website-size-chart.png") 
+  
+# This method will show sizechart in any image viewer 
+sizechart.show()
+
+
 # ---- HEADER SECTION ----
 with st.container():
     st.title("Welcome to the Girl in Space Club Outfitter")
