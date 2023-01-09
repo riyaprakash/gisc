@@ -44,18 +44,20 @@ with st.container():
 # ---- SUIT COLOR ----
 with st.container():
     st.write("---")
-    with st.form("color"):
+    colors = st.form("color")
+    with colors:
         ##Print color questions
         st.header("Suit Color")
         st.write("##")
         st.selectbox("What color do you want your suit to be?", (Red, Yellow, Blue))
         st.write("##")
-        st.form_submit_button("Save")
+        colors.form_submit_button("Save")
 
 # ---- PATCHES ----
 with st.container():
     st.write("---")
-    with st.form("patches"):
+    patches = st.form("patches")
+    with patches:
         ##Print color questions
         st.header("Patches")
         st.write("##")
@@ -65,9 +67,7 @@ with st.container():
         st.write("We are currently unable to provide custom patches. However, if you would like to get your own, you have the option of including three blank patch spaces for the following dimensions:")
         st.checkbox("2 circular patches (diameter 3.75': right chest, left arm")
         st.checkbox("1 rectangular patch (2 x 4): left chest")
-        st.write("##")
-
-        st.form_submit_button("Save")
+        patches.form_submit_button("Save")
 
 
 # ---- FINISH ORDERING ----
