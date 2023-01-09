@@ -49,7 +49,7 @@ with st.container():
         ##Print color questions
         st.header("Suit Color")
         st.write("##")
-        st.selectbox("What color do you want your suit to be?", (Red, Yellow, Blue))
+        st.selectbox("What color do you want your suit to be?", ("Red", "Yellow", "Blue"))
         st.write("##")
         colors.form_submit_button("Save")
 
