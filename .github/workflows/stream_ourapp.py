@@ -51,10 +51,12 @@ with st.container():
     with left_column:
         ##Print customer info questions
         st.header("Customer Info")
-        st.write("##")
         st.write("What is your name?")
+        st.text_input()
         st.write("What is your email?")
+        st.text_input()
         st.write("For what purpose are you purchasing this suit?")
+        st.text_input()
     with right_column:
         ##can add an image here
         ##st_lottie(lottie_coding, height=300, key="coding"
@@ -79,12 +81,19 @@ with st.container():
         ##If user chooses cm then convert the answers to inches
 
         st.write("Enter height")
+        st.text_input()
         st.write("Enter chest")
+        st.text_input()
         st.write("Enter waist")
+        st.text_input()
         st.write("Enter hips/seat")
+        st.text_input()
         st.write("Enter total arm length")
+        st.text_input()
         st.write("Enter inseam")
+        st.text_input()
         st.write("Enter body length")
+        st.text_input()
 
         ##If user chooses standard sizing
         st.write("Which size suit do you want to purchase?")
@@ -106,62 +115,33 @@ with st.container():
         ##Print color questions
         st.header("Suit Color")
         st.write("##")
-        st.write("What color do you want your suit to be?")
+        st.selectbox("What color do you want your suit to be?", (Red, Yellow, Blue))
     with right_column:
 
-
-# ---- PROJECTS ----
+# ---- PATCHES ----
 with st.container():
     st.write("---")
-    st.header("My Projects")
-    st.write("##")
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_lottie_animation)
-    with text_column:
-        st.subheader("Integrate Lottie Animations Inside Your Streamlit App")
-        st.write(
-            """
-            Learn how to use Lottie Files in Streamlit!
-            Animations make our web app more engaging and fun, and Lottie Files are the easiest way to do it!
-            In this tutorial, I'll show you exactly how to do it
-            """
-        )
-        st.markdown("[Watch Video...](https://youtu.be/TXSOitGoINE)")
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_contact_form)
-    with text_column:
-        st.subheader("How To Add A Contact Form To Your Streamlit App")
-        st.write(
-            """
-            Want to add a contact form to your Streamlit website?
-            In this video, I'm going to show you how to implement a contact form in your Streamlit app using the free service ‘Form Submit’.
-            """
-        )
-        st.markdown("[Watch Video...](https://youtu.be/FOULV9Xij_8)")
-
-# ---- CONTACT ----
-with st.container():
-    st.write("---")
-    st.header("Get In Touch With Me!")
-    st.write("##")
-
-    # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-    contact_form = """
-    <form action="https://formsubmit.co/YOUR@MAIL.COM" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
+    ##create 2 columns
     left_column, right_column = st.columns(2)
     with left_column:
-        st.markdown(contact_form, unsafe_allow_html=True)
+        ##Print color questions
+        st.header("Patches")
+        st.write("##")
+        st.write("Would you like the Girl in Space Club Embroidery on the back?")
+        st.button("Yes")
+        st.button("No")
+        st.write("We are currently unable to provide custom patches. However, if you would like to get your own, you have the option of including three blank patch spaces for the following dimensions:")
+        st.write("2 circular patches (diameter 3.75': right chest, left arm")
+        st.write("1 rectangular patch (2 x 4): left chest")
     with right_column:
-        st.empty()
 
-
+# ---- FINISH ORDERING ----
+with st.container():
+    st.write("---")
+    ##create 2 columns
+    left_column, right_column = st.columns(2)
+    with left_column:
+        ##Show finish ordering button
+        if st.button("Finish Ordering Suit")
+            st.write("Thank you for designing a Girl in Space Club flight suit!")
+    with right_column:
