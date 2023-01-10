@@ -9,6 +9,7 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 with st.container():
     st.title("Your Orders")
 
+st.write("##")
 st.write("ORDER 1 DETAILS")
 st.write("##")
 st.write("ORDER 2 DETAILS")
