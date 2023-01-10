@@ -12,9 +12,7 @@ with st.container():
 
 # ---- CUSTOMER INFO ----
 with st.form("login"):
-    st.write("Username")
-    st.text_input()
-    st.write("Password")
-    st.text_input()
-    st.button("Login")
-    st.button("Create New Account")
+    st.text_input("Username")
+    st.text_input("Password")
+    st.form_submit_button("Login")
+    st.form_submit_button("Create New Account")
