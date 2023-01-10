@@ -17,12 +17,12 @@ with st.form("new_account"):
     st.text_input("What is your email?")
     st.text_input("What purpose are you purchasing this suit?")
     st.write("Enter your password")
-    st.write(
+    st.caption(
         """
-        -At least 8 characters
-        -One Uppercase
-        -One Lowercase
-        -One Number
+        -At least 8 characters \n
+        -One Uppercase \n
+        -One Lowercase \n
+        -One Number \n
         -One Special Character
         """
     )
