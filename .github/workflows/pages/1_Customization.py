@@ -8,7 +8,7 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 
 # ---- SIZING PREFERENCE ----
 with st.container():
-    st.title(Flight Suit Customization)
+    st.title("Flight Suit Customization")
     st.write("---")
     ##create 2 columns
     with st.form("size"):
