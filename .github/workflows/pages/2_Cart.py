@@ -7,12 +7,10 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 
 # ---- HEADER SECTION ----
 with st.container():
-    st.title("Welcome to the Girl in Space Club Outfitter")
-    st.subheader("CART PAGE")
+    st.title("Your Orders")
 
-# ---- CUSTOMER INFO ----
-with st.form("login"):
-    st.text_input("Username")
-    st.text_input("Password")
-    st.form_submit_button("Login")
-    st.form_submit_button("Create New Account")
+st.write("ORDER 1 DETAILS")
+st.write("##")
+st.write("ORDER 2 DETAILS")
+st.write("##")
+st.write("ORDER 3 DETAILS")
