@@ -23,9 +23,7 @@ with st.form("new_account"):
         -One Uppercase \n
         -One Lowercase \n
         -One Number \n
-        -One Special Character
-        """
-    )
+        -One Special Character """)
     st.text_input("")
-    st.text_input("Re-enter yout password")
+    st.text_input("Re-enter your password")
     st.form_submit_button("Create New Account")
