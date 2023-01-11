@@ -20,7 +20,7 @@ with rightcol:
     tab1, tab2, tab3 = st.tabs(["Sizing", "Suit Color", "Patches"])
     with tab1:
         ##create 2 columns
-        with st.form("size"):
+        with st.container():
             ##Print size questions 
             st.header("Sizing Preference")
             st.write("##")
@@ -30,22 +30,24 @@ with rightcol:
             
             if 'Custom' in choice:
                 st.write("hi")
-                ##If user chooses custom measurements
-                st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
+                with st.form("custom"):
+                    ##If user chooses custom measurements
+                    st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
 
-                ##If user chooses cm then convert the answers to inches
+                    ##If user chooses cm then convert the answers to inches
 
-                st.number_input("Enter Height")
-                st.number_input("Enter Chest")
-                st.number_input("Enter Waist")
-                st.number_input("Enter Total Arm Length")
-                st.number_input("Enter Inseam")
-                st.number_input("Enter Body Length")
+                    st.number_input("Enter Height")
+                    st.number_input("Enter Chest")
+                    st.number_input("Enter Waist")
+                    st.number_input("Enter Total Arm Length")
+                    st.number_input("Enter Inseam")
+                    st.number_input("Enter Body Length")
 
             if 'Standard' in choice:
                 st.write("bye")
-                ##If user chooses standard sizing
-                st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
+                with st.form("standard"):
+                    ##If user chooses standard sizing
+                    st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
                 
             st.form_submit_button("Save")
 
