@@ -7,10 +7,10 @@ image = Image.open('suit.jpg')
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide")
 
-leftcol, rightcol = st.columns([2,3]);
-
 st.title("Flight Suit Customization")
 st.write("---")
+
+leftcol, rightcol = st.columns([2,3]);
 
 with leftcol:
     st.write("##")
