@@ -26,9 +26,9 @@ with rightcol:
             st.write("##")
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
-            ("-", "Custom", "Standard"))
+            ('-', 'Custom', 'Standard'))
             
-            if choice == "Custom":
+            if choice == 'Custom':
                 ##If user chooses custom measurements
                 st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
 
@@ -41,7 +41,7 @@ with rightcol:
                 st.number_input("Enter Inseam")
                 st.number_input("Enter Body Length")
 
-            if choice == "Standard":
+            if choice == 'Standard':
                 ##If user chooses standard sizing
                 st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
                 
