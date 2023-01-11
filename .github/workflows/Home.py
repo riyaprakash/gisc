@@ -12,5 +12,6 @@ with st.container():
         st.title("Welcome to the Girl in Space Club Outfitter")
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
-    st.markdown('<div style="text-align: center;">Hello World!</div>', unsafe_allow_html=True)
+    
+        st.markdown("<button type='button;'>Click Me!</button>", unsafe_allow_html=True)
 
