@@ -14,11 +14,11 @@ leftcol, rightcol = st.columns([5,4]);
 
 with leftcol:
     st.write("##")
-    st.write("##")
     st.image(image)
 with rightcol:
     # ---- SIZING PREFERENCE ----
-    with st.container():
+    tab1, tab2, tab3 = st.tabs(["Sizing", "Suit Color", "Patches"])
+    with tab1():
         ##create 2 columns
         with st.form("size"):
             ##Print size questions 
@@ -48,7 +48,7 @@ with rightcol:
 
 
     # ---- SUIT COLOR ----
-    with st.container():
+    with tab2:
         st.write("---")
         colors = st.form("color")
         with colors:
@@ -60,7 +60,7 @@ with rightcol:
             colors.form_submit_button("Save")
 
     # ---- PATCHES ----
-    with st.container():
+    with tab3:
         st.write("---")
         patches = st.form("patches")
         with patches:
