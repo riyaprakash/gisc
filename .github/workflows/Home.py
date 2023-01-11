@@ -13,14 +13,6 @@ with st.container():
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
     
-    col1, col2, col3 , col4, col5 = st.columns(5)
-    with col1:
-        pass
-    with col2:
-        pass
-    with col4:
-        pass
-    with col5:
-        pass
-    with col3 :
+    col1, col2, col3 = st.columns(3)
+    with col2 :
         center_button = st.button('Button')
