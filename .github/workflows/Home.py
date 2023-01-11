@@ -7,14 +7,13 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 
 # ---- HEADER SECTION ----
 with st.container():
-    _, col2, _ = st.columns([1, 2, 1])
+    a, col2, b = st.columns([1, 2, 1])
     with col2:
         st.title("Welcome to the Girl in Space Club Outfitter")
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
-        left_column, right_column = st.columns(2)
-        with left_column:
+        with a:
             st.button("Create New Suit")
-        with right_column:
+        with b:
             st.button("View Cart")
 
