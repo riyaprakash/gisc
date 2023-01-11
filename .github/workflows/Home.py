@@ -13,5 +13,14 @@ with st.container():
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
     
-        st.markdown("<button type='button;' style='text-align: center;'>Click Me!</button>", unsafe_allow_html=True)
-
+    col1, col2, col3 , col4, col5 = st.beta_columns(5)
+    with col1:
+        pass
+    with col2:
+        pass
+    with col4:
+        pass
+    with col5:
+        pass
+    with col3 :
+        center_button = st.button('Button')
