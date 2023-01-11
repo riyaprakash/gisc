@@ -29,6 +29,7 @@ with rightcol:
             ["-", "Custom", "Standard"])
             
             if 'Custom' in choice:
+                st.write("hi")
                 ##If user chooses custom measurements
                 st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
 
@@ -42,6 +43,7 @@ with rightcol:
                 st.number_input("Enter Body Length")
 
             if 'Standard' in choice:
+                st.write("bye")
                 ##If user chooses standard sizing
                 st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
                 
