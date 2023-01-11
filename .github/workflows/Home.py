@@ -13,5 +13,5 @@ with st.container():
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
     
-        st.markdown("<button type='button;'>Click Me!</button>", unsafe_allow_html=True)
+        st.markdown("<button type='button;' style='text-align: center;'>Click Me!</button>", unsafe_allow_html=True)
 
