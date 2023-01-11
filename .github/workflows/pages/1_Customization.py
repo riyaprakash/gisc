@@ -77,13 +77,6 @@ with rightcol:
             st.checkbox("2 circular patches (diameter 3.75': right chest, left arm")
             st.checkbox("1 rectangular patch (2 x 4): left chest")
             patches.form_submit_button("Save")
-
-
     # ---- FINISH ORDERING ----
-    with st.container():
-        st.write("---")
-        ##create 2 columns
-        left_column, right_column = st.columns(2)
-        with left_column:
-            ##Show finish ordering button
-            st.button("Finish Ordering Suit")
+    st.write("---")
+    st.button("Finish Ordering Suit")
