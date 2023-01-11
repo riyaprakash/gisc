@@ -26,7 +26,7 @@ with rightcol:
             st.write("##")
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
-            ('-', 'Custom', 'Standard'))
+            ["-", "Custom", "Standard"])
             
             if 'Custom' in choice:
                 ##If user chooses custom measurements
