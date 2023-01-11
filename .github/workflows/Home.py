@@ -12,9 +12,5 @@ with st.container():
         st.title("Welcome to the Girl in Space Club Outfitter")
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
-    a,b,c,d,e = st.columns([1,2,1,2,1])
-    with b:
-        st.button("Create New Suit")
-    with d:
-        st.button("View Cart")
+    st.markdown('<div style="text-align: center;">Hello World!</div>', unsafe_allow_html=True)
 
