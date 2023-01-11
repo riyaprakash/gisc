@@ -9,6 +9,9 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 
 leftcol, rightcol = st.columns([2,3]);
 
+st.title("Flight Suit Customization")
+st.write("---")
+
 with leftcol:
     st.write("##")
     st.write("##")
@@ -16,8 +19,6 @@ with leftcol:
 with rightcol:
     # ---- SIZING PREFERENCE ----
     with st.container():
-        st.title("Flight Suit Customization")
-        st.write("---")
         ##create 2 columns
         with st.form("size"):
             ##Print size questions 
