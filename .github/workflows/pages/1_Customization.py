@@ -2,7 +2,7 @@ import requests
 import streamlit as st
 from PIL import Image
 
-image = Image.open('flightsuit.jpg')
+image = Image.open('suit.jpg')
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide")
@@ -10,6 +10,8 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 leftcol, rightcol = st.columns([2,3]);
 
 with leftcol:
+    st.write("##")
+    st.write("##")
     st.image(image)
 with rightcol:
     # ---- SIZING PREFERENCE ----
