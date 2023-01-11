@@ -37,7 +37,7 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 st.title("Flight Suit Customization")
 st.write("---")
 
-leftcol,rightcol = st.columns([4,3], gap="large");
+leftcol,rightcol = st.columns([8,7], gap="large");
 
 with leftcol:
     st.write("##")
