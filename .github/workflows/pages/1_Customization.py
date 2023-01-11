@@ -52,7 +52,7 @@ with rightcol:
             st.header("Sizing Preference")
             with st.expander("Size Chart"):
                 st.image("flightsuit.jpg")
-            with expander ("How to Measure"):
+            with st.expander("How to Measure"):
                 st.image("suit.jpg")
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
             ["-", "Custom", "Standard"])
