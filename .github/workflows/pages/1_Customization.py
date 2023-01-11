@@ -79,12 +79,11 @@ with rightcol:
             patches.form_submit_button("Save")
 
 
-# ---- FINISH ORDERING ----
-with st.container():
-    st.write("---")
-    ##create 2 columns
-    left_column, right_column = st.columns(2)
-    with left_column:
-        ##Show finish ordering button
-        st.button("Finish Ordering Suit")
-        st.write("Thank you for designing a Girl in Space Club flight suit!")
+    # ---- FINISH ORDERING ----
+    with st.container():
+        st.write("---")
+        ##create 2 columns
+        left_column, right_column = st.columns(2)
+        with left_column:
+            ##Show finish ordering button
+            st.button("Finish Ordering Suit")
