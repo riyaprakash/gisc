@@ -53,4 +53,4 @@ with st.form("new_account"):
     st.text_input("")
     st.text_input("Re-enter your password")
     if st.form_submit_button("Create New Account"):
-        nav_page("Home")
+        nav_page("Login")

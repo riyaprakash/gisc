@@ -41,6 +41,6 @@ with st.form("login"):
     st.text_input("Username")
     st.text_input("Password")
     if st.form_submit_button("Login"):
-        nav_page("Home")
+        nav_page("Customization")
     if st.form_submit_button("Create New Account"):
-        nav_page("Create New Account")
+        nav_page("Create_New_Account")
