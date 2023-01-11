@@ -25,24 +25,26 @@ with rightcol:
             st.header("Sizing Preference")
             st.write("##")
 
-            st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
+            choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
             ("Custom", "Standard"))
             
-            ##If user chooses custom measurements
-            st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
+            if choice == "Custom":
+                ##If user chooses custom measurements
+                st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
 
-            ##If user chooses cm then convert the answers to inches
+                ##If user chooses cm then convert the answers to inches
 
-            st.text_input("Enter Height")
-            st.text_input("Enter Chest")
-            st.text_input("Enter Waist")
-            st.text_input("Enter waist")
-            st.text_input("Enter Total Arm Length")
-            st.text_input("Enter Inseam")
-            st.text_input("Enter Body Length")
+                st.number_input("Enter Height")
+                st.number_input("Enter Chest")
+                st.number_input("Enter Waist")
+                st.number_input("Enter Total Arm Length")
+                st.number_input("Enter Inseam")
+                st.number_input("Enter Body Length")
 
-            ##If user chooses standard sizing
-            st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
+            elif choice == "Standard":
+                ##If user chooses standard sizing
+                st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
+                
             st.form_submit_button("Save")
 
 
