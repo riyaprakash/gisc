@@ -50,7 +50,6 @@ with rightcol:
         with st.container():
             ##Print size questions 
             st.header("Sizing Preference")
-            st.write("##")
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
             ["-", "Custom", "Standard"])
