@@ -51,9 +51,9 @@ with rightcol:
             ##Print size questions 
             st.header("Sizing Preference")
             with st.expander("Size Chart"):
-                st.image("flightsuit.jpg")
+                st.write("INSERT CHART HERE")
             with st.expander("How to Measure"):
-                st.image("suit.jpg")
+                st.write("INSERT GUIDE HERE")
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?",
             ["-", "Custom", "Standard"])
             
