@@ -29,7 +29,6 @@ with rightcol:
             ["-", "Custom", "Standard"])
             
             if 'Custom' in choice:
-                st.write("hi")
                 with st.form("custom"):
                     ##If user chooses custom measurements
                     st.selectbox("What is your preferred unit of measurement?",("cm", "in"))
@@ -42,14 +41,14 @@ with rightcol:
                     st.number_input("Enter Total Arm Length")
                     st.number_input("Enter Inseam")
                     st.number_input("Enter Body Length")
+                    st.form_submit_button("Save")
 
             if 'Standard' in choice:
-                st.write("bye")
                 with st.form("standard"):
                     ##If user chooses standard sizing
                     st.selectbox("Which size suit do you want to purchase?",("XXS", "XS", "S", "M", "L", "XL"))
+                    st.form_submit_button("Save")
                 
-            st.form_submit_button("Save")
 
 
 
