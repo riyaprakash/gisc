@@ -18,7 +18,7 @@ with leftcol:
 with rightcol:
     # ---- SIZING PREFERENCE ----
     tab1, tab2, tab3 = st.tabs(["Sizing", "Suit Color", "Patches"])
-    with tab1():
+    with tab1:
         ##create 2 columns
         with st.form("size"):
             ##Print size questions 
