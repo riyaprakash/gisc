@@ -12,9 +12,9 @@ with st.container():
         st.title("Welcome to the Girl in Space Club Outfitter")
         st.subheader("Design Your Dream Flight Suit Here")
         st.write("##" "##")
-    left_column, right_column = st.columns(2)
-    with left_column:
+    a,b,c,d,e = st.columns([1,2,1,2,1])
+    with b:
         st.button("Create New Suit")
-    with right_column:
+    with d:
         st.button("View Cart")
 
