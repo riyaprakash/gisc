@@ -51,7 +51,7 @@ with rightcol:
     tab1, tab2, tab3 = st.tabs(["Sizing", "Suit Color", "Patches"])
     with tab1:
         ##create 2 columns
-        with st.container(key = "df1"):
+        with st.container():
             ##Print size questions 
             st.header("Sizing Preference")
             st.write("##")
