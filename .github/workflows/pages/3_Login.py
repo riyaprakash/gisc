@@ -44,3 +44,5 @@ with st.form("login"):
         nav_page("Customization")
     if st.form_submit_button("Create New Account"):
         nav_page("Create_New_Account")
+
+#when the user logs add, add their email and name to the csv file before they place an order
