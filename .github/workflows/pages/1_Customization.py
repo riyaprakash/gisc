@@ -42,7 +42,7 @@ st.write("---")
 leftcol,rightcol = st.columns([8,7], gap="large");
 
 
-filepath = f"Orders.csv"
+##filepath = f"Orders.csv"
 with leftcol:
     st.write("##")
     st.image(image)
@@ -60,7 +60,7 @@ with rightcol:
             
             if 'Custom' in choice:
                 with st.form("custom", clear_on_submit=True):
-                    df1 = pd.read_csv(filepath)
+                    ##df1 = pd.read_csv(filepath)
 
                     ##If user chooses custom measurements
                     add_col1 = st.selectbox('What is your preferred unit of measurement?',('cm', 'in'))
