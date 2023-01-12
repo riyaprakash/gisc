@@ -153,6 +153,7 @@ filepath = f"{file_dir}/{file_name}"
 
 #""" App Interface  """
 
+"""
 def main():
 	st.header('Original Data')
 	df1 = pd.read_csv(filepath)
@@ -171,6 +172,7 @@ def main():
 
 	st.header('After Update')
 	st.dataframe(df1)
+"""
 
 
 if __name__ == '__main__':
