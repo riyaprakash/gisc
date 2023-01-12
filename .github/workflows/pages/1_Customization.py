@@ -153,27 +153,28 @@ filepath = f"{file_dir}/{file_name}"
 
 #""" App Interface  """
 
-"""
-def main():
-	st.header('Original Data')
-	df1 = pd.read_csv(filepath)
-	data = st.dataframe(df1)
 
-	with st.sidebar.form(key='df1', clear_on_submit=True):
-		add_col1 = st.text_input('col1')
-		add_col2 = st.number_input('col2', min_value=0.00)
-		add_col3 = st.number_input('col3', min_value=0.00)
-		submit = st.form_submit_button('Submit')
-		if submit:
-			new_data = {'col1': add_col1, 'col2': add_col2, 'col3': add_col3}
+## def main():
+##	st.header('Original Data')
+##	df1 = pd.read_csv(filepath)
+##	data = st.dataframe(df1)
+##
+##	with st.sidebar.form(key='df1', clear_on_submit=True):
+##		add_col1 = st.text_input('col1')
+##		add_col2 = st.number_input('col2', min_value=0.00)
+##		add_col3 = st.number_input('col3', min_value=0.00)
+##		submit = st.form_submit_button('Submit')
+##		if submit:
+##			new_data = {'col1': add_col1, 'col2': add_col2, 'col3': add_col3}
+##
+##			df1 = df1.append(new_data, ignore_index=True)
+##			df1.to_csv(filepath, index=False)
+##
+##	st.header('After Update')
+##	st.dataframe(df1)
 
-			df1 = df1.append(new_data, ignore_index=True)
-			df1.to_csv(filepath, index=False)
-
-	st.header('After Update')
-	st.dataframe(df1)
-"""
 
 
-if __name__ == '__main__':
-	main()
+##if __name__ == '__main__':
+##	main()
+##
