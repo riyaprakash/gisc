@@ -57,10 +57,9 @@ with rightcol:
             st.write("##")
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?", ["-", "Custom", "Standard"])
-            
+            df = pd.read_csv("Orders.csv")
             if 'Custom' in choice:
                 with st.form("custom", clear_on_submit=True):
-                    ##df1 = pd.read_csv(filepath)
 
                     ##If user chooses custom measurements
                     add_col1 = st.selectbox('What is your preferred unit of measurement?',('cm', 'in'))
@@ -76,11 +75,11 @@ with rightcol:
                     custom_measure=st.form_submit_button("Save")
 
                     if custom_measure:
-                        new_data = {'What is your preferred unit of measurement?':add_col1, 'Enter Height': add_col2, 'Enter Chest': add_col3, 
-                        'Enter Waist': add_col4, 'Enter Total Arm Length': add_col5, 'Enter Inseam': add_col6, 'Enter Body Length': add_col7}
-			            ##df1 = df1.append(new_data, ignore_index=True)
-			            ##df1.to_csv(filepath, index=False)
-
+                        new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
+                        'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
+                        
+                        df = df.append(new_data, ignore_index = True)
+                        open("Orders.csv", 'w').write(df.to_csv())
 
             if 'Standard' in choice:
                 with st.form("standard"):
@@ -89,8 +88,7 @@ with rightcol:
                     st.form_submit_button("Save")
 
                     new_data = {'col1': add_col1}
-			            ##df1 = df1.append(new_data, ignore_index=True)
-			            ##df1.to_csv(filepath, index=False)
+
                     
                 
 
@@ -144,37 +142,8 @@ data_src1 = r'https://raw.githubusercontent.com/clueple/free_resources/master/df
 
 
 #""" test folder  """
-# file_dir = os.listdir(r'd:/Downloads')
 file_dir = r'd:/Downloads'
 file_name = 'df1.csv'
 
 filepath = f"{file_dir}/{file_name}"
 
-
-#""" App Interface  """
-
-
-## def main():
-##	st.header('Original Data')
-##	df1 = pd.read_csv(filepath)
-##	data = st.dataframe(df1)
-##
-##	with st.sidebar.form(key='df1', clear_on_submit=True):
-##		add_col1 = st.text_input('col1')
-##		add_col2 = st.number_input('col2', min_value=0.00)
-##		add_col3 = st.number_input('col3', min_value=0.00)
-##		submit = st.form_submit_button('Submit')
-##		if submit:
-##			new_data = {'col1': add_col1, 'col2': add_col2, 'col3': add_col3}
-##
-##			df1 = df1.append(new_data, ignore_index=True)
-##			df1.to_csv(filepath, index=False)
-##
-##	st.header('After Update')
-##	st.dataframe(df1)
-
-
-
-##if __name__ == '__main__':
-##	main()
-##
