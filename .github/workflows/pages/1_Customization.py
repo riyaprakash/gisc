@@ -57,7 +57,6 @@ with rightcol:
             st.write("##")
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?", ["-", "Custom", "Standard"])
-            df = pd.read_csv("Orders.csv")
             if 'Custom' in choice:
                 with st.form("custom", clear_on_submit=True):
 
