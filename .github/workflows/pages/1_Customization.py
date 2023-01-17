@@ -31,7 +31,7 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-image = Image.open('suit.jpg')
+image = Image.open('flightsuit.jpg')
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide")
@@ -101,7 +101,7 @@ with rightcol:
             ##Print color questions
             st.header("Suit Color")
             st.write("##")
-            st.selectbox("What color do you want your suit to be?", ("Red", "Yellow", "Blue"))
+            st.selectbox("What color do you want your suit to be?", ("Black", "Blue"))
             st.write("##")
             colors.form_submit_button("Save")
 
