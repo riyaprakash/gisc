@@ -77,8 +77,10 @@ with rightcol:
                         new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
                         'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
                         
-                        df = df.append(new_data, ignore_index = True)
-                        open("Orders.csv", 'w').write(df.to_csv())
+                    with open('Orders.csv','a', newline='') as f:
+                        writer = csv.writer(f)
+                        writer.writerow(new_data)                        
+                        ##open("Orders.csv", 'w').write(df.to_csv())
 
             if 'Standard' in choice:
                 with st.form("standard"):
