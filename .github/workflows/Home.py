@@ -32,10 +32,6 @@ def nav_page(page_name, timeout_secs=3):
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide", initial_sidebar_state="collapsed")
 
 
-#Hide sidebar
-#st.set_page_config(initial_sidebar_state="collapsed")
-
-
 # ---- HEADER SECTION ----
 with st.container():
     st.title("Welcome to the Girl in Space Club Outfitter")
