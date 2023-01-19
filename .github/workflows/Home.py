@@ -29,11 +29,11 @@ def nav_page(page_name, timeout_secs=3):
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide")
+st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide", initial_sidebar_state="collapsed")
 
 
 #Hide sidebar
-st.set_page_config(initial_sidebar_state="collapsed")
+#st.set_page_config(initial_sidebar_state="collapsed")
 
 
 # ---- HEADER SECTION ----
