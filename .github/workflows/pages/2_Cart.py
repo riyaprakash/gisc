@@ -19,7 +19,7 @@ st.write("ORDER 3 DETAILS")
 
 # ---- CONTACT ----
 st.write("---")
-st.header("Contact us:")
+st.subheader("Contact us:")
 
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
 with open('style.css') as f:
