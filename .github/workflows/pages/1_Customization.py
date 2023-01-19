@@ -65,12 +65,12 @@ with rightcol:
 
                     ##If user chooses cm then convert the answers to inches
                     ##add min and max values!!!
-                    add_col2 = st.number_input('Enter Height')
-                    add_col3 = st.number_input('Enter Chest')
-                    add_col4 = st.number_input('Enter Waist')
-                    add_col5 = st.number_input('Enter Total Arm Length')
-                    add_col6 = st.number_input('Enter Inseam')
-                    add_col7 = st.number_input('Enter Body Length')
+                    add_col2 = st.number_input('Enter Height',1,500)
+                    add_col3 = st.number_input('Enter Chest',1,500)
+                    add_col4 = st.number_input('Enter Waist',1,500)
+                    add_col5 = st.number_input('Enter Total Arm Length',1,500)
+                    add_col6 = st.number_input('Enter Inseam',1,500)
+                    add_col7 = st.number_input('Enter Body Length',1,500)
                     custom_measure=st.form_submit_button("Save")
                     
                     new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
