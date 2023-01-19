@@ -19,7 +19,7 @@ st.write("ORDER 3 DETAILS")
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("---")
 if st.button("Customize Another Suit"):
-    nav_page("1_Customization")
+    nav_page("Customization")
 
 # ---- CONTACT ----
 st.write("---")
