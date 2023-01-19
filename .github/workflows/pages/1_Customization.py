@@ -124,6 +124,16 @@ with rightcol:
     st.write("---")
     if st.button("Finish Ordering Suit"):
         nav_page("Cart")
+    
+    # ---- VIEW CART ----
+    st.write("---")
+    if st.button("View Cart"):
+        nav_page("Cart")
+
+    # ---- BACK TO HOME ----
+    st.write("---")
+    if st.button("Return to home"):
+        nav_page("Home")
 
 
 
