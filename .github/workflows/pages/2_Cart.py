@@ -23,15 +23,16 @@ st.header("Contact us:")
 st.write("##")
 
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-contact_form = """
-<form action="https://formsubmit.co/jnblume2@yahoo.com" method="POST">
-<link rel="stylesheet" href="styles.css">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" placeholder="Your message here" required></textarea>
-    <button type="submit">Send</button>
-</form>
-"""
-st.markdown(contact_form, unsafe_allow_html=True)
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
+    contact_form = """
+    <form action="https://formsubmit.co/jnblume2@yahoo.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message here" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    """
+    st.markdown(contact_form, unsafe_allow_html=True)
 
