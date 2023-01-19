@@ -121,7 +121,6 @@ with rightcol:
             st.checkbox("1 rectangular patch (2 x 4): left chest")
             patches.form_submit_button("Save")
     # ---- FINISH ORDERING ----
-    st.write("---")
     if st.button("Finish Ordering Suit"):
         nav_page("Cart")
     
@@ -131,7 +130,6 @@ with rightcol:
         nav_page("Cart")
 
     # ---- BACK TO HOME ----
-    st.write("---")
     if st.button("Return to home"):
         nav_page("Home")
 
