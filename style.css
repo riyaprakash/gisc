@@ -1,7 +1,7 @@
 /* CSS Snippet from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
 /* Style inputs with type="text", select elements and textareas */
 input[type=message], input[type=email], input[type=text], textarea {
-    width: 10%; /* Full width */
+    width: 60%; /* Full width */
     padding: 8px; /* Some padding */ 
     border: 1px solid rgb(144, 144, 144); /* Gray border */
     border-radius: 4px; /* Rounded borders */
@@ -13,7 +13,6 @@ input[type=message], input[type=email], input[type=text], textarea {
   
   /* Style the submit button with a specific background color etc */
   button[type=submit] {
-    display: inline-block;
     background-color: #a6b1df;
     color: white;
     padding: 12px 20px;
