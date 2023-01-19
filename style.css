@@ -6,7 +6,7 @@ input[type=message], input[type=email], input[type=text], textarea {
     border: 1px solid rgb(144, 144, 144); /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
+    margin-top: 3px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
