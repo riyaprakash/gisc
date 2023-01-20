@@ -48,7 +48,7 @@ with st.form("login"):
 #when the user logs add, add their email and name to the csv file before they place an order
 
 
-##                with st.form("custom", clear_on_submit=True):
+    with st.form("custom", clear_on_submit=True):
 
                     ##If user chooses custom measurements
                     add_col1 = st.selectbox('What is your preferred unit of measurement?',('cm', 'in'))

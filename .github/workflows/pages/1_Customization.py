@@ -31,8 +31,8 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-data_src = r'Final.csv'
-data_src1= r'Orders.csv'
+data_src = r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Orders.csv'
+data_src1= r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Final.csv'
 # convert to dataframe from upload or url in csv format
 def get_data(src):
 	return pd.read_csv(src)
