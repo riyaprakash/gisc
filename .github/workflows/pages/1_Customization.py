@@ -31,6 +31,10 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
+data_src = r'https://github.com/riyaprakash/gisc/blob/05463c283f5a96b4361aa65d9e5db25fea5fd9cb/Orders.csv'
+
+data_src1= r''
+
 image = Image.open('flightsuit.jpg')
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
