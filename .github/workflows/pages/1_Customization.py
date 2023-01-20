@@ -34,8 +34,8 @@ def nav_page(page_name, timeout_secs=3):
 data_src = r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Orders.csv'
 data_src1= r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Final.csv'
 # convert to dataframe from upload or url in csv format
-def get_data(src):
-	return pd.read_csv(src)
+def get_data(data_src):
+	return pd.read_csv(data_src)
 
 # convert to downloadable csv
 def convert_df(df):
@@ -56,7 +56,7 @@ def_col = temp_data.columns
 st.download_button(
 	label = 'Download Template',
 	data = convert_df(temp_data),
-	file_name = 'dfc.csv',
+	file_name = 'Orders.csv',
 	mime = 'text/csv',
 	key = 'tempdata'
 	)
