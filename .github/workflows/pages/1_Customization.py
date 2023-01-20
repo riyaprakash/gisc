@@ -30,49 +30,6 @@ def nav_page(page_name, timeout_secs=3):
     """ % (page_name, timeout_secs)
     html(nav_script)
 
-
-data_src = r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Orders.csv'
-##data_src1= r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Final.csv'
-# convert to dataframe from upload or url in csv format
-def get_data(data_src):
-	return pd.read_csv(data_src)
-
-# convert to downloadable csv
-def convert_df(df):
-   return df.to_csv(index=False).encode('utf-8')
-
-# """ Preprocessed Data  """
-# downloaable template from web
-temp_data = get_data(data_src)
-
-# unwant col name
-unwant_col = r'Unnamed: 0'
-
-# """ get_default_columns  """
-def_col = temp_data.columns
-
-
-# Download template if you don't have any data at all
-st.download_button(
-	label = 'Download Template',
-	data = convert_df(temp_data),
-	file_name = 'Orders.csv',
-	mime = 'text/csv',
-	key = 'tempdata'
-	)
-
-# Upload your on-going data to begin 
-upload_data = st.file_uploader(
-	label = 'Upload Data',
-	type = 'csv',
-	key = 'uploaddata',
-	help = 'This is the on-going data file from your last input session'
-	)
-
-# initiate session state of 'df_result' for the dataframe to be updated
-if 'df_result' not in st.session_state:
-	st.session_state['df_result'] = pd.DataFrame(columns = def_col)
-
 image = Image.open('flightsuit.jpg')
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -110,45 +67,29 @@ with rightcol:
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?", ["-", "Custom", "Standard"])
             if 'Custom' in choice:
-                def main():
-                    if upload_data is not None:
+                 with st.form("custom", clear_on_submit=True):
 
-                        st.header('Before Update')
-                        st.session_state['df_result'] = st.session_state['df_result'].append(pd.read_csv(upload_data), ignore_index=True)
-                        st.session_state['df_result']
+                    ##If user chooses custom measurements
+                    add_col1 = st.selectbox('What is your preferred unit of measurement?',('cm', 'in'))
 
-                        with st.sidebar.form(key = 'input'):
-                             ##If user chooses custom measurements
-                            add_col1 = st.selectbox('What is your preferred unit of measurement?',('cm', 'in'))
+                    ##If user chooses cm then convert the answers to inches
+                    ##add min and max values!!!
+                    add_col2 = st.number_input('Enter Height',0,500)
+                    add_col3 = st.number_input('Enter Chest',0,500)
+                    add_col4 = st.number_input('Enter Waist',0,500)
+                    add_col5 = st.number_input('Enter Total Arm Length',0,500)
+                    add_col6 = st.number_input('Enter Inseam',0,500)
+                    add_col7 = st.number_input('Enter Body Length',0,500)
+                    custom_measure=st.form_submit_button("Save")
+                    
+                    new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
+                        'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
+                    
+                    if custom_measure == True:
+                        df = pd.read_csv("Orders.csv")
 
-                            ##If user chooses cm then convert the answers to inches
-                            ##add min and max values!!!
-                            add_col2 = st.number_input('Enter Height',0,500)
-                            add_col3 = st.number_input('Enter Chest',0,500)
-                            add_col4 = st.number_input('Enter Waist',0,500)
-                            add_col5 = st.number_input('Enter Total Arm Length',0,500)
-                            add_col6 = st.number_input('Enter Inseam',0,500)
-                            add_col7 = st.number_input('Enter Body Length',0,500)
-                            
-                            new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
-                                'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
-                            
-                            
-                            # submit = st.form_submit_button('Submit',on_click=onAddRow(add_data))
-                            submit = st.form_submit_button('Save')
-                            if submit:
-                                st.session_state['df_result'] = st.session_state['df_result'].append(add_data, ignore_index=True)
-
-                        st.header('After Update')
-                        st.session_state['df_result']
-
-                        st.session_state
-
-                if __name__ == "__main__":
-                    main()
-
-
-
+                        df=df.append(new_data, ignore_index = True)
+                        open('Orders.csv', 'w').write(df.to_csv())
 
             if 'Standard' in choice:
                 with st.form("standard"):
