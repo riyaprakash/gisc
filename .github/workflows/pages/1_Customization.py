@@ -65,7 +65,7 @@ with rightcol:
             st.header("Sizing Preference")
             st.write("##")
             size_chart=pd.read_csv('Sizing_Chart.csv')
-            st.expander(size_chart.head())
+            st.write(size_chart.head())
 
             choice = st.selectbox("Do you want to purchase a space suit with custom measurements or with standard sizing?", ["-", "Custom", "Standard"])
             if 'Custom' in choice:
