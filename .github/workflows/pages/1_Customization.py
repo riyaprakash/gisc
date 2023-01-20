@@ -32,7 +32,7 @@ def nav_page(page_name, timeout_secs=3):
 
 
 data_src = r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Orders.csv'
-data_src1= r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Final.csv'
+##data_src1= r'https://raw.githubusercontent.com/riyaprakash/gisc/main/Final.csv'
 # convert to dataframe from upload or url in csv format
 def get_data(data_src):
 	return pd.read_csv(data_src)
@@ -43,7 +43,7 @@ def convert_df(df):
 
 # """ Preprocessed Data  """
 # downloaable template from web
-temp_data = get_data(src=data_src1)
+temp_data = get_data(data_src)
 
 # unwant col name
 unwant_col = r'Unnamed: 0'
