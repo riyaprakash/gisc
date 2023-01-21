@@ -51,12 +51,12 @@ with left:
     st.write('***')
     ##left_column, right_column = st.columns(2)
     ##with left_column:
-    if st.button("Create New Suit", use_column_width=True):
+    if st.button("Create New Suit"):
             nav_page("Customization")
     ##with right_column:
     st.write('##')
     st.write('##')
-    if st.button("View Cart", use_column_width=True):
+    if st.button("View Cart"):
             nav_page("Cart")
 with right:
     st.image(image)
