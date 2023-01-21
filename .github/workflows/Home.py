@@ -44,10 +44,9 @@ image = Image.open('sabrinaskates.jpg')
 
 # ---- HEADER SECTION ----
 left,right = st.columns([5,3])
-
+st.title("Welcome to the Girl in Space Club Outfitter")
+st.subheader("Design Your Dream Flight Suit Here")
 with left:
-    st.title("Welcome to the Girl in Space Club Outfitter")
-    st.subheader("Design Your Dream Flight Suit Here")
     st.write('***')
     ##left_column, right_column = st.columns(2)
     ##with left_column:
