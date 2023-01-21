@@ -43,12 +43,11 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 image = Image.open('sabrinaskates.jpg')
 
 # ---- HEADER SECTION ----
-st.title("Welcome to the Girl in Space Club Outfitter")
-st.subheader("Design Your Dream Flight Suit Here")
-st.write('***')
 
 left,right = st.columns([5,3])
 with left:
+    st.title("Welcome to the Girl in Space Club Outfitter")
+    st.subheader("Design Your Dream Flight Suit Here")
     st.write('***')
     ##left_column, right_column = st.columns(2)
     ##with left_column:
