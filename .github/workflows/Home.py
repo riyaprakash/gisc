@@ -3,7 +3,6 @@ import streamlit as st
 from streamlit.components.v1 import html
 from PIL import Image
 
-
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
         <script type="text/javascript">
@@ -28,7 +27,6 @@ def nav_page(page_name, timeout_secs=3):
         </script>
     """ % (page_name, timeout_secs)
     html(nav_script)
-
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide", initial_sidebar_state="collapsed")
@@ -61,4 +59,4 @@ with left:
     if st.button("View Cart"):
             nav_page("Cart")
 with right:
-    st.image(image)
+    st.image(image, use_column_width=True)
