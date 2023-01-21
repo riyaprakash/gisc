@@ -45,7 +45,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 image = Image.open('sabrinaskates.jpg')
 
 # ---- HEADER SECTION ----
-left,right = st.columns([3,1])
+left,right = st.columns([5,3])
 
 with left:
     st.title("Welcome to the Girl in Space Club Outfitter")
