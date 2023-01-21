@@ -1,6 +1,8 @@
 import requests
 import streamlit as st
 from streamlit.components.v1 import html
+from PIL import Image
+
 
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
@@ -40,9 +42,12 @@ hide_streamlit_style = """
   """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+image = Image.open('sabrinaskates.jpg')
 
 # ---- HEADER SECTION ----
-with st.container():
+left,right = st.columns([3,1])
+
+with left:
     st.title("Welcome to the Girl in Space Club Outfitter")
     st.subheader("Design Your Dream Flight Suit Here")
     st.write('***')
@@ -53,3 +58,5 @@ with st.container():
     with right_column:
         if st.button("View Cart"):
             nav_page("Cart")
+with right:
+    st.image(image)
