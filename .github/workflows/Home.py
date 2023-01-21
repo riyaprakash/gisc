@@ -2,6 +2,7 @@ import requests
 import streamlit as st
 from streamlit.components.v1 import html
 from PIL import Image
+import cv2
 
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
@@ -51,12 +52,12 @@ with left:
     st.write('***')
     ##left_column, right_column = st.columns(2)
     ##with left_column:
-    if st.button("Create New Suit"):
+    if st.button("Create New Suit", use_column_width=True):
             nav_page("Customization")
     ##with right_column:
     st.write('##')
     st.write('##')
-    if st.button("View Cart"):
+    if st.button("View Cart", use_column_width=True):
             nav_page("Cart")
 with right:
-    st.image(image, use_column_width=True)
+    st.image(image)
