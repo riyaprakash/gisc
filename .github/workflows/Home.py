@@ -51,12 +51,12 @@ with left:
     st.title("Welcome to the Girl in Space Club Outfitter")
     st.subheader("Design Your Dream Flight Suit Here")
     st.write('***')
-    left_column, right_column = st.columns(2)
-    with left_column:
-        if st.button("Create New Suit"):
+    ##left_column, right_column = st.columns(2)
+    ##with left_column:
+    if st.button("Create New Suit"):
             nav_page("Customization")
-    with right_column:
-        if st.button("View Cart"):
+    ##with right_column:
+    if st.button("View Cart"):
             nav_page("Cart")
 with right:
     st.image(image)
