@@ -2,7 +2,6 @@ import requests
 import streamlit as st
 from streamlit.components.v1 import html
 from PIL import Image
-import cv2
 
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
