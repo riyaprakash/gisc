@@ -45,6 +45,8 @@ image = Image.open('sabrinaskates.jpg')
 # ---- HEADER SECTION ----
 st.title("Welcome to the Girl in Space Club Outfitter")
 st.subheader("Design Your Dream Flight Suit Here")
+st.write('***')
+
 left,right = st.columns([5,3])
 with left:
     st.write('***')
@@ -53,6 +55,8 @@ with left:
     if st.button("Create New Suit"):
             nav_page("Customization")
     ##with right_column:
+    st.write('##')
+    st.write('##')
     if st.button("View Cart"):
             nav_page("Cart")
 with right:
