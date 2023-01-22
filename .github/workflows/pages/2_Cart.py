@@ -42,9 +42,10 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # ---- HEADER SECTION ----
-left, right = st.columns(2)
 with st.container():
     st.title("Your Orders")
+
+left, right = st.columns(2)
 
 with left:
     st.write("##")
@@ -54,11 +55,12 @@ with left:
     st.write("##")
     st.write("ORDER 3 DETAILS")
 
+# Continue to Payment button is disabled until email is entered
 with right:
     email = st.text_input("Email")
     phone = st.text_input("Phone Number", placeholder="Optional")
     complete = True
-    if email and phone:
+    if email:
         complete = False
     st.button("Continue to Payment", disabled = complete)
 
@@ -72,9 +74,7 @@ st.write("---")
 st.subheader("Contact us:")
 
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-col1,col2=st.columns([100,1])
-with col1:
-    with open('style.css') as f:
+with open('style.css') as f:
         st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
         contact_form = """
         <form action="https://formsubmit.co/jnblume2@yahoo.com" method="POST">
