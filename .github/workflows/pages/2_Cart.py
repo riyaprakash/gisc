@@ -71,8 +71,8 @@ st.write("---")
 st.subheader("Contact us:")
 
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-
-with st.container():
+col1,_,_=st.columns(100,1,1)
+with col1:
     with open('style.css') as f:
         st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
         contact_form = """
