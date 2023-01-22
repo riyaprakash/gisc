@@ -42,15 +42,24 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # ---- HEADER SECTION ----
+left, right = st.columns(2)
 with st.container():
     st.title("Your Orders")
 
-st.write("##")
-st.write("ORDER 1 DETAILS")
-st.write("##")
-st.write("ORDER 2 DETAILS")
-st.write("##")
-st.write("ORDER 3 DETAILS")
+with left:
+    st.write("##")
+    st.write("ORDER 1 DETAILS")
+    st.write("##")
+    st.write("ORDER 2 DETAILS")
+    st.write("##")
+    st.write("ORDER 3 DETAILS")
+
+with right:
+    email = st.text_input("Email")
+    phone = st.text_input("Phone Number", placeholder="Optional")
+    pay = st.button("Continue to Payment", disabled = True)
+    if email and phone:
+        pay(disabled=False)
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("---")
