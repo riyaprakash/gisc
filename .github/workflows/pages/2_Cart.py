@@ -82,6 +82,7 @@ with open('style.css') as f:
             <input type="word" name="name" placeholder="Your name" required>
             <input type="em" name="email" placeholder="Your email" required>
             <textarea name="mess" placeholder="Your message here" required></textarea>
+            <br>
             <button type="submit">Send</button>
         </form>
         """
