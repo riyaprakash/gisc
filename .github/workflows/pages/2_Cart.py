@@ -59,7 +59,7 @@ with right:
     phone = st.text_input("Phone Number", placeholder="Optional")
     pay = st.button("Continue to Payment", disabled = True)
     if email and phone:
-        pay(disabled=False)
+        st.session_state.disabled = True
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("---")
