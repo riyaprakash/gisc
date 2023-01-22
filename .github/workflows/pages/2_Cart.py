@@ -65,7 +65,6 @@ with right:
     st.button("Continue to Payment", disabled = complete)
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
-st.write("---")
 if st.button("Customize Another Suit"):
     nav_page("Customization")
 
