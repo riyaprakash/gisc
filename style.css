@@ -1,6 +1,6 @@
 /* CSS Snippet from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
 /* Style inputs with type="text", select elements and textareas */
-input[type=message], input[type=email], input[type=text], textarea, input:not(.except) {
+input[type=message], input[type=email], input[type=word], textarea, input:not(.except) {
     width: 100%; /* Full width */
     padding: 8px; /* Some padding */ 
     border: 1px solid rgb(144, 144, 144); /* Gray border */
