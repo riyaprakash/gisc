@@ -55,8 +55,6 @@ with left:
     st.write("ORDER 3 DETAILS")
 
 with right:
-    with open('style.css') as f:
-        st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
         email = st.text_input("Email")
         phone = st.text_input("Phone Number", placeholder="Optional")
         pay = st.button("Continue to Payment", disabled = True)
@@ -73,16 +71,18 @@ st.write("---")
 st.subheader("Contact us:")
 
 # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
-    contact_form = """
-    <form action="https://formsubmit.co/jnblume2@yahoo.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
-    st.markdown(contact_form, unsafe_allow_html=True)
+
+with st.container():
+    with open('style.css') as f:
+        st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
+        contact_form = """
+        <form action="https://formsubmit.co/jnblume2@yahoo.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message here" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        """
+        st.markdown(contact_form, unsafe_allow_html=True)
 
