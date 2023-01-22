@@ -55,12 +55,13 @@ with left:
     st.write("ORDER 3 DETAILS")
 
 with right:
-    st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
-    email = st.text_input("Email")
-    phone = st.text_input("Phone Number", placeholder="Optional")
-    pay = st.button("Continue to Payment", disabled = True)
-    if email and phone:
-        st.session_state.disabled = True
+    with open('style.css') as f:
+        st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
+        email = st.text_input("Email")
+        phone = st.text_input("Phone Number", placeholder="Optional")
+        pay = st.button("Continue to Payment", disabled = True)
+        if email and phone:
+            st.session_state.disabled = True
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("---")
