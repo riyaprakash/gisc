@@ -55,11 +55,12 @@ with left:
     st.write("ORDER 3 DETAILS")
 
 with right:
-        email = st.text_input("Email")
-        phone = st.text_input("Phone Number", placeholder="Optional")
-        pay = st.button("Continue to Payment", disabled = True)
-        if email and phone:
-            st.session_state.disabled = True
+    email = st.text_input("Email")
+    phone = st.text_input("Phone Number", placeholder="Optional")
+    complete = False
+    if email and phone:
+        complete = True
+    st.button("Continue to Payment", disabled = complete)
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("---")
