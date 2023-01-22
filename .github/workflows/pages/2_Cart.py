@@ -57,9 +57,9 @@ with left:
 with right:
     email = st.text_input("Email")
     phone = st.text_input("Phone Number", placeholder="Optional")
-    complete = False
+    complete = True
     if email and phone:
-        complete = True
+        complete = False
     st.button("Continue to Payment", disabled = complete)
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
