@@ -53,7 +53,7 @@ with left:
         st.write("Size: Custom  \n  Color: Blue  \n  Embroidery: Yes  \n  Patches: Circular, Rectangular")
     st.write("##")
     with st.expander("ORDER 2: Jordyn's Suit"):
-        st.write("")
+        st.write("Size: Standard, XS  \n  Color: Black  \n  Embroidery: No  \n  Patches: Circular, Rectangular")
 
 # Continue to Payment button is disabled until email is entered
 with right:
