@@ -45,7 +45,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 with st.container():
     st.title("Your Orders")
 
-left, right = st.columns(2)
+left, right = st.columns(2, gap = "large")
 
 with left:
     st.write("##")
