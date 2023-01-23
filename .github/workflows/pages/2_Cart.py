@@ -49,11 +49,14 @@ left, right = st.columns(2)
 
 with left:
     st.write("##")
-    st.write("ORDER 1 DETAILS")
+    with st.expander("ORDER 1 DETAILS"):
+        st.write("Size: Custom ## Color: Blue ## Embroidery: Yes ## Patches: Circular, Rectangular")
     st.write("##")
-    st.write("ORDER 2 DETAILS")
+    with st.expander("ORDER 2 DETAILS"):
+        st.write("")
     st.write("##")
-    st.write("ORDER 3 DETAILS")
+    with st.expander("ORDER 3 DETAILS"):
+        st.write("")
 
 # Continue to Payment button is disabled until email is entered
 with right:
