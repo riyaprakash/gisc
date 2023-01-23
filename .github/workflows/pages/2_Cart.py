@@ -49,13 +49,10 @@ left, right = st.columns(2)
 
 with left:
     st.write("##")
-    with st.expander("ORDER 1 DETAILS"):
+    with st.expander("ORDER 1: Riya's Suit"):
         st.write("Size: Custom  \n  Color: Blue  \n  Embroidery: Yes  \n  Patches: Circular, Rectangular")
     st.write("##")
-    with st.expander("ORDER 2 DETAILS"):
-        st.write("")
-    st.write("##")
-    with st.expander("ORDER 3 DETAILS"):
+    with st.expander("ORDER 2: Jordyn's Suit"):
         st.write("")
 
 # Continue to Payment button is disabled until email is entered
