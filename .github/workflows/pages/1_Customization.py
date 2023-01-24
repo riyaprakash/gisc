@@ -133,6 +133,7 @@ with rightcol:
             st.checkbox("1 rectangular patch (2 x 4): left chest")
             patches.form_submit_button("Save")
     # ---- FINISH ORDERING ----
+    st.text_input(" ", placeholder="Name your Order")
     st.button("Add to Cart", disabled = True)
     
     # ---- VIEW CART ----
