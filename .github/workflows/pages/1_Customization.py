@@ -138,8 +138,8 @@ with rightcol:
     
     # ---- VIEW CART ----
     st.write("---")
-    ##if st.button("View Cart"):
-        ##nav_page("Cart")
+    if st.button("View Cart"):
+        nav_page("Cart")
 
     # ---- BACK TO HOME ----
     if st.button("Return to home"):
