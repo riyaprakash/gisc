@@ -34,12 +34,12 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 # Hide streamlit branding
 hide_streamlit_style = """
   <style>
-  #MainMenu {visibility: hidden;}
+
   footer {visibility: hidden;}
   </style>
   """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
+  ##MainMenu {visibility: hidden;}
 image = Image.open('sabrinaskates.jpg')
 
 # ---- HEADER SECTION ----
