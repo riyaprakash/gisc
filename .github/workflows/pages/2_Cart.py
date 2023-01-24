@@ -34,6 +34,7 @@ st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:
 # Hide streamlit branding
 hide_streamlit_style = """
   <style>
+  #MainMenu {visibility: hidden;}
   footer {visibility: hidden;}
   </style>
   """
