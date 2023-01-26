@@ -131,14 +131,14 @@ with rightcol:
             st.write("We are currently unable to provide custom patches. However, if you would like to get your own, you have the option of including three blank patch spaces for the following dimensions:")
             st.checkbox("2 circular patches (diameter 3.75': right chest, left arm")
             st.checkbox("1 rectangular patch (2 x 4): left chest")
-            patches.form_submit_button("Save")
+             #display balloons on button click
+            balloons = st.balloons()
+            patches.form_submit_button("Save", on_click= balloons)
  
-     #display balloons on button click
-    balloons = st.balloons()
  
     # ---- FINISH ORDERING ----
     st.text_input(" ", placeholder="Name your Order")
-    addtocart = st.button("Add to Cart", disabled = True, on_click=balloons)
+    addtocart = st.button("Add to Cart", disabled = True)
 
     
     # ---- VIEW CART ----
