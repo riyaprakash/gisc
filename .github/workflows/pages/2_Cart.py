@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 from streamlit.components.v1 import html
-from pathlib import path
+from pathlib import Path
 
 
 def nav_page(page_name, timeout_secs=3):
