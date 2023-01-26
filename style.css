@@ -40,6 +40,11 @@ input[type=mess], input[type=em], input[type=word], textarea {
     color: white;
     text-decoration: none;
   }
+
+  .pay_text hover{
+    color: white;
+    text-decoration: none;
+  }
   
 
   
