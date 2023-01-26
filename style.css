@@ -36,14 +36,20 @@ input[type=mess], input[type=em], input[type=word], textarea {
     cursor: pointer;
   }
 
-  .pay_text {
-    color: white;
+  a:link {
     text-decoration: none;
   }
-
-  .pay_text hover{
-    color: white;
+  
+  a:visited {
     text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
   }
   
 
