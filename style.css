@@ -26,6 +26,20 @@ input[type=mess], input[type=em], input[type=word], textarea {
     background-color: #104f97;
   }
   
+  /* Style the submit button with a specific background color etc */
+  button a [type=submit] {
+    background-color: #a6b1df;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker color */
+  button a [type=submit]:hover {
+    background-color: #104f97;
+  }
 
   
   /* Hide Streamlit Branding */
