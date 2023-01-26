@@ -36,20 +36,20 @@ input[type=mess], input[type=em], input[type=word], textarea {
     cursor: pointer;
   }
 
-  a:link {
+  a:link, a:visited {
+    background-color: #a6b1df;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
   }
   
-  a:visited {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  a:active {
-    text-decoration: underline;
+  a:hover, a:active {
+    background-color: red;
   }
   
 
