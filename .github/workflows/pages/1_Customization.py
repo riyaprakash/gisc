@@ -132,8 +132,7 @@ with rightcol:
             st.checkbox("2 circular patches (diameter 3.75': right chest, left arm")
             st.checkbox("1 rectangular patch (2 x 4): left chest")
              #display balloons on button click
-            balloons = st.balloons()
-            patches.form_submit_button("Save", on_click= balloons)
+            patches.form_submit_button("Save", on_click= st.balloons())
  
  
     # ---- FINISH ORDERING ----
