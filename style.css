@@ -35,6 +35,11 @@ input[type=mess], input[type=em], input[type=word], textarea {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .pay_text {
+    color: white;
+    text-decoration: none;
+  }
   
 
   
