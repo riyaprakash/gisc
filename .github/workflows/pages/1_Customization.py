@@ -138,7 +138,7 @@ with rightcol:
  
     # ---- FINISH ORDERING ----
     st.text_input(" ", placeholder="Name your Order")
-    addtocart = st.button("Add to Cart", disabled = True, onclick(balloons))
+    addtocart = st.button("Add to Cart", disabled = True, on_click(balloons))
 
     
     # ---- VIEW CART ----
