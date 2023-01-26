@@ -68,7 +68,7 @@ with right:
     with open('style.css') as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
             st.markdown(
-            f'<button><a class="payment" href={stripe_checkout}>Continue to Payment</a></button>',
+            f'<button class="payment"><a class="payment" href={stripe_checkout}>Continue to Payment</a></button>',
             unsafe_allow_html=True,
             )
 
