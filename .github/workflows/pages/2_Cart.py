@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 from streamlit.components.v1 import html
+from pathlib import path
 
 
 def nav_page(page_name, timeout_secs=3):
@@ -40,6 +41,8 @@ hide_streamlit_style = """
   """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+stripe_checkout = "https://buy.stripe.com/test_eVa16wgok9VUcMMcMM"
+
 
 # ---- HEADER SECTION ----
 with st.container():
@@ -62,7 +65,10 @@ with right:
     complete = True
     if email:
         complete = False
-    st.button("Continue to Payment", disabled = complete)
+        st.markdown(
+        f'<a href={stripe_checkout} class="button">Continue to Payment</a>',
+        unsafe_allow_html=True,
+        )
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("##")
