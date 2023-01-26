@@ -30,6 +30,10 @@ def nav_page(page_name, timeout_secs=3):
     """ % (page_name, timeout_secs)
     html(nav_script)
 
+def balloons():
+    st.balloons()
+
+    
 image = Image.open('flightsuit.jpg')
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -132,7 +136,7 @@ with rightcol:
             st.checkbox("2 circular patches (diameter 3.75': right chest, left arm")
             st.checkbox("1 rectangular patch (2 x 4): left chest")
              #display balloons on button click
-            patches.form_submit_button("Save", on_click= st.balloons())
+            patches.form_submit_button("Save", on_click= balloons)
  
  
     # ---- FINISH ORDERING ----
