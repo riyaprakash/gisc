@@ -27,15 +27,6 @@ input[type=mess], input[type=em], input[type=word], textarea {
   }
   
   /* Style the submit button with a specific background color etc */
-  .payment {
-    background-color: #a6b1df;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
   a:link, a:visited {
     background-color: #a6b1df;
     color: white;
@@ -49,7 +40,7 @@ input[type=mess], input[type=em], input[type=word], textarea {
   }
   
   a:hover, a:active {
-    background-color: red;
+    background-color: #104f97;
   }
   
 
