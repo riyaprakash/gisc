@@ -38,7 +38,7 @@ input[type=mess], input[type=em], input[type=word], textarea {
     text-decoration: none;
     display: inline-block;
   }
-  
+  /* Hover mouse over button*/
   a:hover, a:active {
     background-color: #104f97;
   }
