@@ -67,16 +67,14 @@ with right:
         ##complete = False
     with open('style.css') as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
+
+            ##button only shows up when user puts in email
             if email:
                 st.markdown(
                 f'<a type="click" href={stripe_checkout}>Continue to Payment</a>',
                 unsafe_allow_html=True,
                 )
-            else:
-                st.markdown(
-                f'<a type="disabled" class="click" href={stripe_checkout}>Continue to Payment</a>',
-                unsafe_allow_html=True,
-                )
+
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("##")
