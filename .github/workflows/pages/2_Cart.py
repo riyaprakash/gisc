@@ -60,7 +60,7 @@ with left:
 
 # Continue to Payment button is disabled until email is entered
 with right:
-    email = st.text_input("Email", placeholder= "Required to Continue to Payment")
+    email = st.text_input("Email", placeholder= "Required")
     phone = st.text_input("Phone Number", placeholder="Optional")
     complete = True
     ##if email:
