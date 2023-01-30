@@ -67,10 +67,11 @@ with right:
         ##complete = False
     with open('style.css') as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
-            st.markdown(
-            f'<a href={stripe_checkout}>Continue to Payment</a>',
-            unsafe_allow_html=True,
-            )
+            if email:
+                st.markdown(
+                f'<a href={stripe_checkout}>Continue to Payment</a>',
+                unsafe_allow_html=True,
+                )
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("##")
