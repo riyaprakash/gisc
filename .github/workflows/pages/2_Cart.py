@@ -74,7 +74,7 @@ with right:
                 )
             else:
                 st.markdown(
-                f'<a type="disabled" type="click" href={stripe_checkout}>Continue to Payment</a>',
+                f'<a type="disabled" class="click" href={stripe_checkout}>Continue to Payment</a>',
                 unsafe_allow_html=True,
                 )
 
