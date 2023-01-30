@@ -27,7 +27,7 @@ input[type=mess], input[type=em], input[type=word], textarea {
   }
   
   /* Style the submit button with a specific background color etc */
-  a:link, a:visited {
+  a[type=click]:link, a[type=click]:visited {
     background-color: #a6b1df;
     color: white;
     padding: 12px 20px;
@@ -39,7 +39,7 @@ input[type=mess], input[type=em], input[type=word], textarea {
     display: inline-block;
   }
   /* Hover mouse over button*/
-  a:hover, a:active {
+  a[type=click]:hover, a[type=click]:active {
     background-color: #104f97;
   }
   

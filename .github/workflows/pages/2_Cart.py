@@ -69,7 +69,7 @@ with right:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
             if email:
                 st.markdown(
-                f'<a href={stripe_checkout}>Continue to Payment</a>',
+                f'<a type="click" href={stripe_checkout}>Continue to Payment</a>',
                 unsafe_allow_html=True,
                 )
             else:
