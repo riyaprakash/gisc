@@ -72,6 +72,11 @@ with right:
                 f'<a href={stripe_checkout}>Continue to Payment</a>',
                 unsafe_allow_html=True,
                 )
+            else:
+                st.markdown(
+                f'<a type="disabled" href={stripe_checkout}>Continue to Payment</a>',
+                unsafe_allow_html=True,
+                )
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("##")
