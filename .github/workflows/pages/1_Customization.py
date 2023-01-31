@@ -33,6 +33,9 @@ def nav_page(page_name, timeout_secs=3):
 def balloons():
     st.balloons()
 
+def generate_csv(df):
+    df.to_csv('filename.csv')
+
     
 image = Image.open('flightsuit.jpg')
 
@@ -97,14 +100,14 @@ with rightcol:
                         ##file_name= "Orders1.csv",
                         ##mime= "text/csv"
                         ##)
-                        dff = pd.read_csv("https://raw.githubusercontent.com/riyaprakash/gisc/main/Orders.csv")
+                        dff = pd.read_csv("Orders1.csv")
                         st.write(dff)
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
-                        ##header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
+                        header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
                         ##df=pd.DataFrame(header)
-                        ##df.to_csv('Orders1.csv')
+                        generate_csv(header)
                         ##st.write("Hello")
 
             if 'Standard' in choice:
