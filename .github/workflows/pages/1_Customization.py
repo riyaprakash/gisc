@@ -36,6 +36,7 @@ def balloons():
 def generate_csv(df):
     ##df.to_csv('Orders1.csv')
     dfg=pd.DataFrame(df)
+    dfg.to_csv("Orders1.csv")
 
     
 image = Image.open('flightsuit.jpg')
