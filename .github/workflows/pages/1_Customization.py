@@ -100,7 +100,7 @@ with rightcol:
                         header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
                         df=pd.DataFrame(header)
                         df.to_csv('Orders1.csv')
-                        print("Hello")
+                        st.write("Hello")
 
             if 'Standard' in choice:
                 with st.form("standard"):
