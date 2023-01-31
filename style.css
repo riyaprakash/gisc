@@ -43,6 +43,10 @@ input[type=mess], input[type=em], input[type=word], textarea {
     background-color: #104f97;
   }
   
+  .disabled{
+    pointer-events: none;
+    cursor: not-allowed;
+  }
   
   /* Hide Streamlit Branding */
   /*#MainMenu {visibility: hidden;}
