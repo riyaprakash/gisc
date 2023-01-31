@@ -102,10 +102,10 @@ with rightcol:
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
-                        header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
-                        df=pd.DataFrame(header)
-                        df.to_csv('Orders1.csv')
-                        st.write("Hello")
+                        ##header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
+                        ##df=pd.DataFrame(header)
+                        ##df.to_csv('Orders1.csv')
+                        ##st.write("Hello")
 
             if 'Standard' in choice:
                 with st.form("standard"):
