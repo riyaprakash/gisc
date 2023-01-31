@@ -99,7 +99,7 @@ with rightcol:
                         ##open('Orders.csv', 'w').write(df.to_csv())
                         header = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
                         with open('Orders.csv', 'w') as file:
-                            writer.csv.writer(file)
+                            writer = csv.writer(file)
                             writer.writerow(header)
 
             if 'Standard' in choice:
