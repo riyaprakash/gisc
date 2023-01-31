@@ -92,7 +92,13 @@ with rightcol:
                         'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
                     
                     if st.form_submit_button("Save"):
-                        ##df = pd.read_csv("Orders.csv")
+                        ##label="Download Data as CSV",
+                        ##data= "csv",
+                        ##file_name= "Orders1.csv",
+                        ##mime= "text/csv"
+                        ##)
+                        dff = pd.read_csv("Orders1.csv")
+                        st.write(dff)
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
