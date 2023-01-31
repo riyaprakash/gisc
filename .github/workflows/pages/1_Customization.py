@@ -87,12 +87,11 @@ with rightcol:
                     add_col5 = st.number_input('Enter Total Arm Length',0,500)
                     add_col6 = st.number_input('Enter Inseam',0,500)
                     add_col7 = st.number_input('Enter Body Length',0,500)
-                    custom_measure=st.form_submit_button("Save")
                     
                     new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
                         'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
                     
-                    if custom_measure == True:
+                    if st.form_submit_button("Save"):
                         ##df = pd.read_csv("Orders.csv")
 
                         ##df=df.append(new_data, ignore_index = True)
