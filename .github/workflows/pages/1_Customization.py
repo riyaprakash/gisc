@@ -93,10 +93,14 @@ with rightcol:
                         'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
                     
                     if custom_measure == True:
-                        df = pd.read_csv("Orders.csv")
+                        ##df = pd.read_csv("Orders.csv")
 
-                        df=df.append(new_data, ignore_index = True)
-                        open('Orders.csv', 'w').write(df.to_csv())
+                        ##df=df.append(new_data, ignore_index = True)
+                        ##open('Orders.csv', 'w').write(df.to_csv())
+                        header = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
+                        with open('Orders.csv', 'w') as file:
+                            writer.csv.writer(file)
+                            writer.writerow(header)
 
             if 'Standard' in choice:
                 with st.form("standard"):
