@@ -97,7 +97,7 @@ with rightcol:
                         ##file_name= "Orders1.csv",
                         ##mime= "text/csv"
                         ##)
-                        dff = pd.read_csv("main/Orders1.csv")
+                        dff = pd.read_csv("https://raw.githubusercontent.com/riyaprakash/gisc/main/Orders.csv")
                         st.write(dff)
 
                         ##df=df.append(new_data, ignore_index = True)
