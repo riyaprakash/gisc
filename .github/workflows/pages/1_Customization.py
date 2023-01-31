@@ -100,14 +100,15 @@ with rightcol:
                         ##file_name= "Orders1.csv",
                         ##mime= "text/csv"
                         ##)
-                        dff = pd.read_csv("Orders1.csv")
-                        st.write(dff)
+                        ##dff = pd.read_csv("Orders1.csv")
+                        ##st.write(dff)
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
                         header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
+                        ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
-                        generate_csv("Orders1.csv")
+                        generate_csv(header)
                         ##st.write("Hello")
 
             if 'Standard' in choice:
