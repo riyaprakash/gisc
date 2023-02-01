@@ -62,6 +62,8 @@ with left:
 with right:
     input= st.text_input("Email", placeholder= "Required")
     email_address = input
+
+    ##email verification
     response = requests.get(
         "https://isitarealemail.com/api/email/validate",
         params = {'email': email_address})
@@ -72,15 +74,12 @@ with right:
     ##elif status == "invalid":
         ##st.write("email is invalid")
         
-    ##email = st.text_input("Email", placeholder= "Required")
     phone = st.text_input("Phone Number", placeholder="Optional")
-    ##complete = True
-    ##if email:
-        ##complete = False
+
     with open('style.css') as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 
-            ##button only shows up when user puts in email
+            ##button only allows click when user puts in valid email
             if status== "valid":
                 st.markdown(
                 f'<a type="click" href={stripe_checkout}>Continue to Payment</a>',
@@ -91,6 +90,7 @@ with right:
                 f'<span class="disabled"><a type="click" href={stripe_checkout}>Continue to Payment</a></span>',
                 unsafe_allow_html=True,
                 )
+                ##error only shows up when something is in the box
                 if input:
                     st.error("Email is invalid")
 
