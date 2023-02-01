@@ -103,7 +103,7 @@ with rightcol:
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
-                        header = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
+                        headerList = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
                         file.to_csv("Orders1.csv", header=headerList, index=False)
   
                         file2 = pd.read_csv("gfg2.csv")
