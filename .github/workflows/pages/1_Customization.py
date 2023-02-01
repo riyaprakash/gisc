@@ -92,25 +92,26 @@ with rightcol:
                         'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
                     
                     if st.form_submit_button("Save"):
-                        ##label="Download Data as CSV",
-                        ##data= "csv",
-                        file= "Orders1.csv"
-                        print(file)
-                        ##mime= "text/csv"
-                        ##)
+                        ##file= "Orders1.csv"
+                        headerList = ['col1', 'col2', 'col3', 'col4']
+  
+                        # open CSV file and assign header
+                        with open("Orders.csv", 'w') as file:
+                            dw = csv.DictWriter(file, delimiter=',', 
+                                                fieldnames=headerList)
+                            dw.writeheader()
+                        
+                        # display csv file
+                        fileContent = pd.read_csv("gfg3.csv")
+                        fileContent
                         ##dff = pd.read_csv("Orders1.csv")
                         ##st.write(dff)
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
-                        headerList = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
-                        file.to_csv("Orders1.csv", header=headerList, index=False)
-  
-                        file2 = pd.read_csv("gfg2.csv")
-                        print(file2)
+                        ##headerList = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
-                        generate_csv(header)
                         ##st.write("Hello")
 
             if 'Standard' in choice:
