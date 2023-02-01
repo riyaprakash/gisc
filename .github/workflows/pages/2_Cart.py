@@ -60,7 +60,20 @@ with left:
 
 # Continue to Payment button is disabled until email is entered
 with right:
-    email = st.text_input("Email", placeholder= "Required")
+    email_address = st.text_input("Email", placeholder= "Required")
+    response = requests.get(
+        "https://isitarealemail.com/api/email/validate",
+        params = {'email': email_address})
+
+    status = response.json()['status']
+    if status == "valid":
+        st.write("email is valid")
+    elif status == "invalid":
+        st.write("email is invalid")
+    else:
+        st.write("email was unknown")
+        
+    ##email = st.text_input("Email", placeholder= "Required")
     phone = st.text_input("Phone Number", placeholder="Optional")
     complete = True
     ##if email:
