@@ -2,6 +2,7 @@ import requests
 import streamlit as st
 import csv
 import pandas as pd
+from csv import writer
 from PIL import Image
 from streamlit.components.v1 import html
 
@@ -32,12 +33,6 @@ def nav_page(page_name, timeout_secs=3):
 
 def balloons():
     st.balloons()
-
-def generate_csv(df):
-    ##df.to_csv('Orders1.csv')
-    dfg=pd.DataFrame(df)
-    dfg.to_csv("Orders1.csv")
-
     
 image = Image.open('flightsuit.jpg')
 
@@ -99,7 +94,8 @@ with rightcol:
                     if st.form_submit_button("Save"):
                         ##label="Download Data as CSV",
                         ##data= "csv",
-                        ##file_name= "Orders1.csv",
+                        file= "Orders1.csv"
+                        print(file)
                         ##mime= "text/csv"
                         ##)
                         ##dff = pd.read_csv("Orders1.csv")
@@ -107,7 +103,11 @@ with rightcol:
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
-                        header = {'Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length'}
+                        header = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
+                        file.to_csv("Orders1.csv", header=headerList, index=False)
+  
+                        file2 = pd.read_csv("gfg2.csv")
+                        print(file2)
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
                         generate_csv(header)
