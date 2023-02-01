@@ -67,12 +67,10 @@ with right:
         params = {'email': email_address})
 
     status = response.json()['status']
-    if status == "valid":
-        st.write("email is valid")
-    elif status == "invalid":
-        st.write("email is invalid")
-    else:
-        st.write("email was unknown")
+    ##if status == "valid":
+        ##st.write("email is valid")
+    ##elif status == "invalid":
+        ##st.write("email is invalid")
         
     ##email = st.text_input("Email", placeholder= "Required")
     phone = st.text_input("Phone Number", placeholder="Optional")
@@ -93,6 +91,7 @@ with right:
                 f'<span class="disabled"><a type="click" href={stripe_checkout}>Continue to Payment</a></span>',
                 unsafe_allow_html=True,
                 )
+                st.error("Email is invalid")
 
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
