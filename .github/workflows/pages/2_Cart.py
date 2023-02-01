@@ -75,14 +75,14 @@ with right:
         
     ##email = st.text_input("Email", placeholder= "Required")
     phone = st.text_input("Phone Number", placeholder="Optional")
-    complete = True
+    ##complete = True
     ##if email:
         ##complete = False
     with open('style.css') as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 
             ##button only shows up when user puts in email
-            if email:
+            if email_address:
                 st.markdown(
                 f'<a type="click" href={stripe_checkout}>Continue to Payment</a>',
                 unsafe_allow_html=True,
