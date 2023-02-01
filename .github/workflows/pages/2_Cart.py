@@ -67,12 +67,7 @@ with right:
         params = {'email': email_address})
 
     status = response.json()['status']
-    if status == "valid":
-        st.write("email is valid")
-    elif status == "invalid":
-        st.write("email is invalid")
-    else:
-        st.write("email was unknown")
+   
         
     ##email = st.text_input("Email", placeholder= "Required")
     phone = st.text_input("Phone Number", placeholder="Optional")
@@ -83,7 +78,7 @@ with right:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 
             ##button only shows up when user puts in email
-            if email_address:
+            if status== "valid:":
                 st.markdown(
                 f'<a type="click" href={stripe_checkout}>Continue to Payment</a>',
                 unsafe_allow_html=True,
