@@ -91,7 +91,7 @@ with right:
                 f'<span class="disabled"><a type="click" href={stripe_checkout}>Continue to Payment</a></span>',
                 unsafe_allow_html=True,
                 )
-                if not input:
+                if input:
                     st.error("Email is invalid")
 
 
