@@ -60,8 +60,8 @@ with left:
 
 # Continue to Payment button is disabled until email is entered
 with right:
-    email_address = "riyaprakash921@gmail.com"
-    ##st.text_input("Email", placeholder= "Required")
+    input= st.text_input("Email", placeholder= "Required")
+    email_address = input
     response = requests.get(
         "https://isitarealemail.com/api/email/validate",
         params = {'email': email_address})
