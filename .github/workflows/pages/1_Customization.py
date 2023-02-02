@@ -40,7 +40,7 @@ def nav_home_page(page_name, timeout_secs=3):
                 var links = window.parent.document.getElementsByTagName("a");
                 for (var i = 0; i < links.length; i++) {
                     document.write(links[i].href.toLowerCase())
-                    document.write(/n)
+                    document.write(\n)
                 }
                 var elasped = new Date() - start_time;
                 if (elasped < timeout_secs * 1000) {
