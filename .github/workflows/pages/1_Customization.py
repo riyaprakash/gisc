@@ -42,12 +42,7 @@ def nav_home_page(page_name, timeout_secs=3):
                     document.write(links[i].href.toLowerCase())
                     document.write(\n)
                 }
-                var elasped = new Date() - start_time;
-                if (elasped < timeout_secs * 1000) {
-                    setTimeout(attempt_nav_page, 100, page_name, start_time, timeout_secs);
-                } else {
-                    alert("Unable to navigate to page '" + page_name + "' after " + timeout_secs + " second(s).");
-                }
+                
             }
             window.addEventListener("load", function() {
                 attempt_nav_page("%s", new Date(), %d);
