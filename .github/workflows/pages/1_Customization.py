@@ -9,6 +9,7 @@ from streamlit.components.v1 import html
 from streamlit.source_util import get_pages
 
 def nav_page(page_name, timeout_secs=3):
+     #links is the array, window is the page you are currently on, accessing the parent file of the customization page(pages folder) 
     nav_script = """
         <script type="text/javascript">
             function attempt_nav_page(page_name, start_time, timeout_secs) {
