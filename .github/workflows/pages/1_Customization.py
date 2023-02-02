@@ -45,8 +45,7 @@ def switch_page(page_name: str):
         if standardize_name(config["page_name"]) == page_name:
             ##raise RerunException(
                 st.experimental_rerun(
-                    page_script_hash=page_hash,
-                    page_name=page_name,
+                    
                 )
             ##)
 
