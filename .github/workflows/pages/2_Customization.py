@@ -5,7 +5,7 @@ import pandas as pd
 from csv import writer
 from PIL import Image
 from streamlit.components.v1 import html
-##from streamlit.ScriptRunner import RerunException
+from streamlit_extras.switch_page_button import switch_page
 from streamlit.source_util import get_pages
 
 def nav_page(page_name, timeout_secs=3):
@@ -33,24 +33,6 @@ def nav_page(page_name, timeout_secs=3):
         </script>
     """ % (page_name, timeout_secs)
     html(nav_script)
-
-def nav_home_page(page_name, timeout_secs=3):
-    nav_script = """
-        <script type="text/javascript">
-            function attempt_nav_page(page_name, start_time, timeout_secs) {
-                var links = window.parent.top.document.getElementsByTagName("a");
-                for (var i = 0; i < links.length; i++) {
-                    document.write(links[i] + "<br>")
-                }
-                
-            }
-            window.addEventListener("load", function() {
-                attempt_nav_page("%s", new Date(), %d);
-            });
-        </script>
-    """ % (page_name, timeout_secs)
-    html(nav_script)
-
 
 def balloons():
     st.balloons()
@@ -188,7 +170,7 @@ with rightcol:
 
     # ---- BACK TO HOME ----
     if st.button("Return to home"):
-        nav_page("Home")
+        switch_page("Home")
 
 
 
