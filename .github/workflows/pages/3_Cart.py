@@ -80,9 +80,8 @@ with right:
     phone = st.text_input("Phone Number", placeholder="Optional")
     phone_number = phonenumbers.parse(phone)
     number = False
-    if number == True:
     if phonenumbers.is_valid_number(phone_number)== False:
-        #??? syntax
+        number=True
 
 
     with open('style.css') as f:
@@ -102,6 +101,9 @@ with right:
                 ##error only shows up when something is in the box
                 if input:
                     st.error("Email is invalid")
+
+                if number:
+                    st.error("Phone Number is invalid")
 
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
