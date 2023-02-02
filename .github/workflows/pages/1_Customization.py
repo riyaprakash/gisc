@@ -5,6 +5,9 @@ import pandas as pd
 from csv import writer
 from PIL import Image
 from streamlit.components.v1 import html
+from streamlit.ScriptRequestQueue import RerunData
+from streamlit.ScriptRunner import RerunException
+from streamlit.source_util import get_pages
 
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
@@ -32,9 +35,6 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 def switch_page(page_name: str):
-    from streamlit import _RerunData, _RerunException
-    from streamlit.source_util import get_pages
-
     def standardize_name(name: str) -> str:
         return name.lower().replace("_", " ")
     
