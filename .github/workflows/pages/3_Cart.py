@@ -32,7 +32,9 @@ def nav_page(page_name, timeout_secs=3):
 
 def phone_verif(number):
     if number.isnumeric() and len(number)==10:
-            return True
+        return True
+    else:
+        return False
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide", initial_sidebar_state="collapsed")
