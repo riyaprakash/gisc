@@ -82,7 +82,7 @@ with right:
     #Phone number input
     phone = st.text_input("Phone Number", placeholder="Optional")
     phone_error = False
-    if phone_verif(phone_input) == False:
+    if (phone_verif(phone_input) == False):
         phone_error = True
     if (phone and phone_error):
         st.error("Phone Number Invalid")
