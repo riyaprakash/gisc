@@ -103,7 +103,7 @@ with right:
                 )
                 ##error only shows up when something is in the box
                 if input:
-                    st.error("Email is invalid")
+                    st.error("Email Invalid")
 
             if (phone and phone_error):
                 st.error("Phone Number Invalid")
