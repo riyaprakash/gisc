@@ -12,8 +12,7 @@ def nav_page(page_name, timeout_secs=3):
     nav_script = """
         <script type="text/javascript">
             function attempt_nav_page(page_name, start_time, timeout_secs) {
-                j = window.parent();
-                var links = j.document.getElementsByTagName("a");
+                var links = window.parents.document.getElementsByTagName("a");
                 for (var i = 0; i < links.length; i++) {
                     if (links[i].href.toLowerCase().endsWith("/" + page_name.toLowerCase())) {
                         links[i].click();
