@@ -33,8 +33,6 @@ def nav_page(page_name, timeout_secs=3):
 def phone_verif(number):
     if number.isnumeric() and len(number)==10:
         return True
-    else:
-        return False
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="GISC Flight Suit Outfitter", page_icon= ":rocket:", layout="wide", initial_sidebar_state="collapsed")
@@ -84,7 +82,7 @@ with right:
     #Phone number input
     phone = st.text_input("Phone Number", placeholder="Optional")
     phone_error = False
-    if (phone_verif(phone_input) == False):
+    if not (phone_verif(phone_input)):
         phone_error = True
     if (phone and phone_error):
         st.error("Phone Number Invalid")
