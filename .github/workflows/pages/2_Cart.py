@@ -101,11 +101,12 @@ if st.button("Customize Another Suit"):
     nav_page("Customization")
 
 # ---- ENTER CART NUMBER ----
+st.write("---")
 st.header("Enter Your Cart Number to return to a previous cart")
-st.write("##")
+st.text_input()
 
 # ---- DISPLAY CART NUMBER ----
-st.header("Your Cart Number: ")
+st.write("Your Cart Number: ")
 #add code to generate a random cart number for the csv or pull the old cart number out of the csv
 
 # ---- CONTACT ----
