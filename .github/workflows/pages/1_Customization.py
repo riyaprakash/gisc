@@ -31,6 +31,29 @@ def nav_page(page_name, timeout_secs=3):
     """ % (page_name, timeout_secs)
     html(nav_script)
 
+def switch_page(page_name: str):
+    from streamlit import _RerunData, _RerunException
+    from streamlit.source_util import get_pages
+
+    def standardize_name(name: str) -> str:
+        return name.lower().replace("_", " ")
+    
+    page_name = standardize_name(page_name)
+
+    pages = get_pages("Home.py")  # OR whatever your main page is called
+
+    for page_hash, config in pages.items():
+        if standardize_name(config["page_name"]) == page_name:
+            raise _RerunException(
+                _RerunData(
+                    page_script_hash=page_hash,
+                    page_name=page_name,
+                )
+            )
+
+    page_names = [standardize_name(config["page_name"]) for config in pages.values()]
+
+
 def balloons():
     st.balloons()
     
@@ -167,7 +190,7 @@ with rightcol:
 
     # ---- BACK TO HOME ----
     if st.button("Return to home"):
-        nav_page("https://raw.githubusercontent.com/riyaprakash/gisc/main/.github/workflows/Home.py")
+        switch_page("Home")
 
 
 
