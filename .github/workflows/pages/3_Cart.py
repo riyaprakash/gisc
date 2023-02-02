@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+import phonenumbers
 #import streamlit_authenticator as stauth
 from streamlit.components.v1 import html 
 from pathlib import Path
@@ -74,8 +75,13 @@ with right:
         ##st.write("email is valid")
     ##elif status == "invalid":
         ##st.write("email is invalid")
-        
+    
+    #Phone number input
     phone = st.text_input("Phone Number", placeholder="Optional")
+    phone_number = phonenumbers.parse(phone)
+    if phonenumbers.is_valid_number(my_number)= false:
+        #??? syntax
+
 
     with open('style.css') as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
