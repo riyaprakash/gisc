@@ -102,8 +102,8 @@ if st.button("Customize Another Suit"):
 
 # ---- ENTER CART NUMBER ----
 st.write("---")
-st.header("Enter Your Cart Number to return to a previous cart")
-st.text_input()
+st.header("Enter Your Cart Number to return to a previous cart:")
+cartnumber = st.text_input("Cart Number", placeholder="Optional")
 
 # ---- DISPLAY CART NUMBER ----
 st.write("Your Cart Number: ")
