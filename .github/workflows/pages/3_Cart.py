@@ -31,8 +31,7 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 def phone_verif(number):
-    if number.isnumeric():
-        if len(number)==10:
+    if number.isnumeric() and len(number)==10:
             return True
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -82,9 +81,10 @@ with right:
     
     #Phone number input
     phone = st.text_input("Phone Number", placeholder="Optional")
-    number = False
-    if phone_verif(phone) == False:
-        number = true
+    phone_input = phone
+    phone_error = False
+    if phone_verif(phone_input) == False:
+        phone_error = true
 
 
     with open('style.css') as f:
@@ -105,7 +105,7 @@ with right:
                 if input:
                     st.error("Email is invalid")
             
-            if phone:
+            if phone_input and phone_error:
                 st.error("Phone Number Invalid")
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
