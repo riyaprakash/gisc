@@ -37,7 +37,6 @@ def nav_page(page_name, timeout_secs=3):
 def balloons():
     st.balloons()
 
-@extra
 def switch_page(page_name: str):
     from streamlit.runtime.scriptrunner import RerunData, RerunException
     from streamlit.source_util import get_pages
