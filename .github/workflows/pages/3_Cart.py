@@ -84,8 +84,7 @@ with right:
     phone_error = False
     if not (phone_verif(phone)):
         phone_error = True
-    if (phone and phone_error):
-        st.error("Phone Number Invalid")
+    
 
 
     with open('style.css') as f:
@@ -105,6 +104,9 @@ with right:
                 ##error only shows up when something is in the box
                 if input:
                     st.error("Email is invalid")
+
+            if (phone and phone_error):
+                st.error("Phone Number Invalid")
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("##")
