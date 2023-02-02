@@ -37,7 +37,6 @@ def nav_home_page(page_name, timeout_secs=3):
     nav_script = """
         <script type="text/javascript">
             function attempt_nav_page(page_name, start_time, timeout_secs) {
-                Object window = "Home.py";
                 var links = window.parent.document.getElementsByTagName("a");
                 for (var i = 0; i < links.length; i++) {
                     document.write(links[i] + "<br>")
