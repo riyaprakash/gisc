@@ -5,7 +5,6 @@ import pandas as pd
 from csv import writer
 from PIL import Image
 from streamlit.components.v1 import html
-from streamlit.ScriptRequestQueue import RerunData
 from streamlit.ScriptRunner import RerunException
 from streamlit.source_util import get_pages
 
@@ -44,8 +43,8 @@ def switch_page(page_name: str):
 
     for page_hash, config in pages.items():
         if standardize_name(config["page_name"]) == page_name:
-            raise _RerunException(
-                _RerunData(
+            raise RerunException(
+                st.experimental_rerun(
                     page_script_hash=page_hash,
                     page_name=page_name,
                 )
