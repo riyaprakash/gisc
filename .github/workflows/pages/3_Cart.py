@@ -1,6 +1,5 @@
 import requests
 import streamlit as st
-import phonenumbers
 #import streamlit_authenticator as stauth
 from streamlit.components.v1 import html 
 from pathlib import Path
@@ -78,10 +77,6 @@ with right:
     
     #Phone number input
     phone = st.text_input("Phone Number", placeholder="Optional")
-    phone_number = phonenumbers.parse(phone)
-    number = False
-    if phonenumbers.is_valid_number(phone_number)== False:
-        number=True
 
 
     with open('style.css') as f:
