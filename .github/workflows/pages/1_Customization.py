@@ -167,7 +167,7 @@ with rightcol:
 
     # ---- BACK TO HOME ----
     if st.button("Return to home"):
-        nav_page("Home.py")
+        nav_page("https://raw.githubusercontent.com/riyaprakash/gisc/main/.github/workflows/Home.py")
 
 
 
