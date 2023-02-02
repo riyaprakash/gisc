@@ -79,7 +79,9 @@ with right:
     #Phone number input
     phone = st.text_input("Phone Number", placeholder="Optional")
     phone_number = phonenumbers.parse(phone)
-    if phonenumbers.is_valid_number(my_number)= false:
+    number = False
+    if number == True:
+    if phonenumbers.is_valid_number(phone_number)== False:
         #??? syntax
 
 
