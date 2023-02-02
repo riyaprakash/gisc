@@ -104,8 +104,9 @@ with right:
                 ##error only shows up when something is in the box
                 if input:
                     st.error("Email is invalid")
-    if phone:
-        st.error("Phone Number Invalid")
+            
+            if phone:
+                st.error("Phone Number Invalid")
 
 # ---- CUSTOMIZE ANOTHER SUIT  ----
 st.write("##")
