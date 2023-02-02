@@ -12,7 +12,7 @@ def nav_page(page_name, timeout_secs=3):
     nav_script = """
         <script type="text/javascript">
             function attempt_nav_page(page_name, start_time, timeout_secs) {
-                var links = window.parent.document.getElementsByTagName("a");
+                var links = window.top.document.getElementsByTagName("a");
                 for (var i = 0; i < links.length; i++) {
                     if (links[i].href.toLowerCase().endsWith("/" + page_name.toLowerCase())) {
                         links[i].click();
@@ -187,7 +187,7 @@ with rightcol:
 
     # ---- BACK TO HOME ----
     if st.button("Return to home"):
-        nav_home_page("Home")
+        nav_page("Home")
 
 
 
