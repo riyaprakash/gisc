@@ -55,10 +55,8 @@ with left:
             nav_page("Customization")
     ##with right_column:
     st.write('##')
-    st.write('##')
     if st.button("View Cart"):
             nav_page("Cart")
-    st.write('##')
     st.write('##')
     if st.button("Return to Old Cart"):
         nav_page("Cart")
