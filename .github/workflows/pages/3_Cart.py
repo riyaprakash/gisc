@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
-import streamlit_authenticator as stauth
-#from streamlit.components.v1 import html 
+#import streamlit_authenticator as stauth
+from streamlit.components.v1 import html 
 from pathlib import Path
 
 
