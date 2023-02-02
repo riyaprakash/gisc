@@ -85,7 +85,7 @@ with right:
     phone_error = False
     if phone_verif(phone_input) == False:
         phone_error = true
-    if phone_input:
+    if phone:
         st.error("Phone Number Invalid")
 
 
