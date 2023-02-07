@@ -121,6 +121,7 @@ cartnumber = st.text_input(" ", placeholder="Enter cart number")
 # ---- DISPLAY CART NUMBER ----
 st.write("Your Cart Number: ")
 #add code to generate a random cart number for the csv or pull the old cart number out of the csv
+print(random.randint(0001,9999))
 
 # ---- CONTACT ----
 st.write("---")
