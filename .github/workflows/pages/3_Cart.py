@@ -120,9 +120,9 @@ st.subheader("Enter your cart number to return to a previous cart:")
 cartnumber = st.text_input(" ", placeholder="Enter cart number")
 
 # ---- DISPLAY CART NUMBER ----
-st.write("Your Cart Number: ")
+st.write("Your Cart Number: ", random.randint(1000,9999))
 #add code to generate a random cart number for the csv or pull the old cart number out of the csv
-st.write(random.randint(1000,9999))
+#st.write(random.randint(1000,9999))
 
 # ---- CONTACT ----
 st.write("---")
