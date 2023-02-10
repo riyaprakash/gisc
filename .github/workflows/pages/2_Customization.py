@@ -134,6 +134,7 @@ with rightcol:
                         ##open('Orders.csv', 'w').write(df.to_csv())
                         fake_data = [{'Unit': 'cm', 'Height' : '1', 'Chest': '2', 'Waist': '3', 'Total Arm Length': '4', 'Inseam': '5', 'Body Length': '6'},
                         {'Unit': 'in', 'Height': '11', 'Chest': '22', 'Waist': '33', 'Total Arm Length': '44', 'Inseam': '55', 'Body Length': '66'}]
+                        
                         custom = {'Unit': [add_col1], 'Height': [add_col2], 'Chest': [add_col3], 'Waist': [add_col4], 'Total Arm Length': [add_col5], 'Inseam': [add_col6], 'Body Length': [add_col7]}
                         fields = ['Unit', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
                         with open('Orders.csv', 'w', newline='') as file: 
