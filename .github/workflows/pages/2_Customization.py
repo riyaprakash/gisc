@@ -115,28 +115,31 @@ with rightcol:
                     add_col6 = st.number_input('Enter Inseam',0,500)
                     add_col7 = st.number_input('Enter Body Length',0,500)
                     
-                    new_data = {'What is your preferred unit of measurement?':[add_col1], 'Enter Height': [add_col2], 'Enter Chest': [add_col3], 
-                        'Enter Waist': [add_col4], 'Enter Total Arm Length': [add_col5], 'Enter Inseam': [add_col6], 'Enter Body Length': [add_col7]}
-                    
                     if st.form_submit_button("Save"):
                         ##file= "Orders1.csv"
-                        headerList = ['col1', 'col2', 'col3', 'col4']
+                        ##headerList = ['col1', 'col2', 'col3', 'col4']
   
                         # open CSV file and assign header
-                        with open("Orders.csv", 'w') as file:
-                            dw = csv.DictWriter(file, delimiter=',', 
-                                                fieldnames=headerList)
-                            dw.writeheader()
-                        
+                        ##with open("Orders.csv", 'w') as file:
+                            ##dw = csv.DictWriter(file, delimiter=',', 
+                                                ##fieldnames=headerList)
+                            ##dw.writeheader()
                         # display csv file
-                        fileContent = pd.read_csv("Orders.csv")
-                        fileContent
+                        ##fileContent = pd.read_csv("Orders.csv")
+                        ##fileContent
                         ##dff = pd.read_csv("Orders1.csv")
                         ##st.write(dff)
 
                         ##df=df.append(new_data, ignore_index = True)
                         ##open('Orders.csv', 'w').write(df.to_csv())
-                        ##headerList = ['Unit', 'Name', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
+                        custom = {'Unit': [add_col1], 'Height': [add_col2], 'Chest': [add_col3], 'Waist': [add_col4], 'Total Arm Length': [add_col5], 'Inseam': [add_col6], 'Body Length': [add_col7]}
+                        fields = ['Unit', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
+                        with open('Orders.csv', 'w', newline='') as file: 
+                            writer = csv.DictWriter(file, fieldnames = fields)
+
+                            writer.writeheader() 
+
+                            writer.writerows(custom)
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
                         ##st.write("Hello")
