@@ -147,7 +147,7 @@ with rightcol:
 
                             ##w.writeheader() 
 
-                            w.writerows(rowd)
+                            w.writerows(rows)
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
                         ##st.write("Hello")
