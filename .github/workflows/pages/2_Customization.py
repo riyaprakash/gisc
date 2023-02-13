@@ -140,7 +140,7 @@ with rightcol:
                         with open('Orders.csv', 'w', newline='') as file: 
                             w = csv.writer(file)
 
-                            w.writeheader() 
+                            ##w.writeheader() 
 
                             w.writerows(fake_data)
                         ##table=st.dataframe()
