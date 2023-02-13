@@ -142,7 +142,7 @@ with rightcol:
 
                             writer.writeheader() 
 
-                            writer.writerows(custom)
+                            writer.writerows(fake_data)
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
                         ##st.write("Hello")
