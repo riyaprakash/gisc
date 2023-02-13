@@ -138,11 +138,11 @@ with rightcol:
                         custom = {'Unit': [add_col1], 'Height': [add_col2], 'Chest': [add_col3], 'Waist': [add_col4], 'Total Arm Length': [add_col5], 'Inseam': [add_col6], 'Body Length': [add_col7]}
                         fields = ['Unit', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
                         with open('Orders.csv', 'w', newline='') as file: 
-                            writer = csv.DictWriter(file, fieldnames = fields)
+                            w = csv.writer(file)
 
-                            writer.writeheader() 
+                            w.writeheader() 
 
-                            writer.writerows(fake_data)
+                            w.writerows(fake_data)
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
                         ##st.write("Hello")
