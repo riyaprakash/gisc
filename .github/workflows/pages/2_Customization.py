@@ -151,8 +151,8 @@ with rightcol:
                             ##file.close()
 
                         f = open("Orders.csv", "wb")
-                        writer = csv.writer(f)
-                        writer.writerows(rows)
+                        w = csv.writer(f)
+                        w.writerows(rows)
                         f.close()
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
