@@ -116,6 +116,10 @@ with rightcol:
                     add_col7 = st.number_input('Enter Body Length',0,500)
                     
                     if st.form_submit_button("Save"):
+                        st.write(pd.DataFrame({
+                        'first column': [1, 2, 3, 4],
+                        'second column': [10, 20, 30, 40],
+                        }))
                         ##file= "Orders1.csv"
                         ##headerList = ['col1', 'col2', 'col3', 'col4']
   
