@@ -140,14 +140,15 @@ with rightcol:
                         ['Sagar', 'SE', '1', '9.5'], 
                         ['Prateek', 'MCE', '3', '7.8'], 
                         ['Sahil', 'EP', '2', '9.1']] 
-                        custom = {'Unit': [add_col1], 'Height': [add_col2], 'Chest': [add_col3], 'Waist': [add_col4], 'Total Arm Length': [add_col5], 'Inseam': [add_col6], 'Body Length': [add_col7]}
-                        fields = ['Unit', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
+                        ##custom = {'Unit': [add_col1], 'Height': [add_col2], 'Chest': [add_col3], 'Waist': [add_col4], 'Total Arm Length': [add_col5], 'Inseam': [add_col6], 'Body Length': [add_col7]}
+                       ##fields = ['Unit', 'Height', 'Chest', 'Waist', 'Total Arm Length', 'Inseam', 'Body Length']
                         with open('Orders.csv', 'w', newline='') as file: 
                             w = csv.writer(file)
 
                             ##w.writeheader() 
 
                             w.writerows(rows)
+                            file.close()
                         ##table=st.dataframe()
                         ##df=pd.DataFrame(header)
                         ##st.write("Hello")
